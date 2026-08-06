@@ -1,0 +1,94 @@
+{
+  "description": "失效或被吸收法律名称陷阱配置。当检索查询、模型回答或下游系统引用下列名称时，应标记为潜在过时（stale），并引导至 replaced_by 指向的现行法。本文件用于防幻觉校验，不参与条文存储。",
+  "updated": "2026-08-07",
+  "entries": [
+    {
+      "name": "中华人民共和国合同法",
+      "type": "repealed",
+      "repealed_date": "2021-01-01",
+      "replaced_by": "CIVIL_CODE",
+      "replaced_by_name": "中华人民共和国民法典（第三编 合同）",
+      "note": "原合同法整体被民法典吸收并废止。"
+    },
+    {
+      "name": "中华人民共和国民法总则",
+      "type": "repealed",
+      "repealed_date": "2021-01-01",
+      "replaced_by": "CIVIL_CODE",
+      "replaced_by_name": "中华人民共和国民法典（第一编 总则）",
+      "note": "民法总则被民法典总则编取代并废止。"
+    },
+    {
+      "name": "中华人民共和国物权法",
+      "type": "repealed",
+      "repealed_date": "2021-01-01",
+      "replaced_by": "CIVIL_CODE",
+      "replaced_by_name": "中华人民共和国民法典（第二编 物权）",
+      "note": "物权法被民法典物权编吸收并废止。"
+    },
+    {
+      "name": "中华人民共和国婚姻法",
+      "type": "repealed",
+      "repealed_date": "2021-01-01",
+      "replaced_by": "CIVIL_CODE",
+      "replaced_by_name": "中华人民共和国民法典（第五编 婚姻家庭）",
+      "note": "婚姻法被民法典婚姻家庭编吸收并废止。"
+    },
+    {
+      "name": "中华人民共和国继承法",
+      "type": "repealed",
+      "repealed_date": "2021-01-01",
+      "replaced_by": "CIVIL_CODE",
+      "replaced_by_name": "中华人民共和国民法典（第六编 继承）",
+      "note": "继承法被民法典继承编吸收并废止。"
+    },
+    {
+      "name": "中华人民共和国收养法",
+      "type": "repealed",
+      "repealed_date": "2021-01-01",
+      "replaced_by": "CIVIL_CODE",
+      "replaced_by_name": "中华人民共和国民法典（第五编 婚姻家庭 第五章 收养）",
+      "note": "收养法被民法典婚姻家庭编吸收并废止。"
+    },
+    {
+      "name": "中华人民共和国侵权责任法",
+      "type": "repealed",
+      "repealed_date": "2021-01-01",
+      "replaced_by": "CIVIL_CODE",
+      "replaced_by_name": "中华人民共和国民法典（第七编 侵权责任）",
+      "note": "侵权责任法被民法典侵权责任编吸收并废止。"
+    },
+    {
+      "name": "中华人民共和国公司法（2013修正）",
+      "type": "superseded",
+      "repealed_date": "2024-07-01",
+      "replaced_by": "COMPANY_LAW",
+      "replaced_by_name": "中华人民共和国公司法（2023修订）",
+      "note": "2023修订版自2024-07-01施行，旧版同时废止。引用旧版条文须比对修订差异。"
+    },
+    {
+      "name": "中华人民共和国公司法（2018修正）",
+      "type": "superseded",
+      "repealed_date": "2024-07-01",
+      "replaced_by": "COMPANY_LAW",
+      "replaced_by_name": "中华人民共和国公司法（2023修订）",
+      "note": "2023修订版自2024-07-01施行，旧版同时废止。引用旧版条文须比对修订差异。"
+    },
+    {
+      "name": "中华人民共和国增值税暂行条例",
+      "type": "repealed",
+      "repealed_date": "2026-01-01",
+      "replaced_by": "VAT_LAW",
+      "replaced_by_name": "中华人民共和国增值税法",
+      "note": "增值税法自2026-01-01施行，暂行条例同步废止。"
+    },
+    {
+      "name": "中华人民共和国营业税暂行条例",
+      "type": "repealed",
+      "repealed_date": "2017-11-19",
+      "replaced_by": null,
+      "replaced_by_name": "（营改增，改征增值税）",
+      "note": "营业税已废止，相关行为改征增值税。"
+    }
+  ]
+}

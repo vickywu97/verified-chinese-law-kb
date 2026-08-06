@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-08-07",
+  "owner": "vickywu97",
+  "repository": "verified-chinese-law-kb",
+  "modules": [
+    {
+      "id": "M1",
+      "name": "民法典",
+      "name_en": "Civil Code of the People's Republic of China",
+      "law_code": "CIVIL_CODE",
+      "total_articles": 1260,
+      "verified_articles": 27,
+      "status": "partial",
+      "versions": ["2021-01-01"],
+      "download_url": "https://github.com/vickywu97/verified-chinese-law-kb/releases/tag/v1.0.0-M1",
+      "price_tier": "free"
+    }
+  ]
+}

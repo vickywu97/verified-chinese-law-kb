@@ -1,0 +1,191 @@
+{
+  "CIVIL_CODE_1_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "立法目的"
+  },
+  "CIVIL_CODE_7_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "诚信原则"
+  },
+  "CIVIL_CODE_8_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "公序良俗"
+  },
+  "CIVIL_CODE_111_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "个人信息保护"
+  },
+  "CIVIL_CODE_143_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "法律行为有效要件"
+  },
+  "CIVIL_CODE_144_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "无行为能力无效"
+  },
+  "CIVIL_CODE_146_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "虚假表示无效"
+  },
+  "CIVIL_CODE_147_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "重大误解可撤销"
+  },
+  "CIVIL_CODE_148_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "欺诈可撤销"
+  },
+  "CIVIL_CODE_150_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "胁迫可撤销"
+  },
+  "CIVIL_CODE_153_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "违反强制规定/公序良俗无效"
+  },
+  "CIVIL_CODE_157_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "无效/撤销的法律后果"
+  },
+  "CIVIL_CODE_509_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "全面履行与诚信附随义务"
+  },
+  "CIVIL_CODE_577_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "违约责任（整合原《合同法》第107条）"
+  },
+  "CIVIL_CODE_584_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "损害赔偿可预见规则（整合原《合同法》第113条）"
+  },
+  "CIVIL_CODE_588_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "定金与违约金择一适用"
+  },
+  "CIVIL_CODE_1043_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "夫妻忠实义务"
+  },
+  "CIVIL_CODE_1064_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "夫妻共同债务"
+  },
+  "CIVIL_CODE_1165_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "过错责任原则（整合原《侵权责任法》第6条）"
+  },
+  "CIVIL_CODE_1166_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "无过错责任（整合原《侵权责任法》第7条）"
+  },
+  "CIVIL_CODE_1167_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "危险预防请求权"
+  },
+  "CIVIL_CODE_1182_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-04",
+    "notes": "侵害人身权益财产损失赔偿（原《侵权责任法》第20条）"
+  },
+  "CIVIL_CODE_1188_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "监护人责任"
+  },
+  "CIVIL_CODE_1191_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "用人单位侵权"
+  },
+  "CIVIL_CODE_1192_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "个人劳务侵权"
+  },
+  "CIVIL_CODE_1198_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "安全保障义务"
+  },
+  "CIVIL_CODE_1254_v1": {
+    "status": "verified",
+    "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
+    "source": "全国人民代表大会公报",
+    "verified_at": "2026-08-01",
+    "notes": "高空抛物"
+  }
+}
