@@ -73,11 +73,19 @@ def cmd_get(args):
             print(f"下载失败: {e}", file=sys.stderr)
             return 2
 
-    dest = os.path.join(REPO_ROOT, "modules", args.module)
+    # Release 资产约定：tarball 内含模块目录（如 M1_civil_code/），
+    # 因此解包到 modules/ 根目录，得到 modules/M1_civil_code/。
+    dest = os.path.join(REPO_ROOT, "modules")
     os.makedirs(dest, exist_ok=True)
     with tarfile.open(archive, "r:gz") as tf:
-        tf.extractall(dest)
-    print(f"已解包到 {dest}")
+        members = tf.getnames()
+        # filter='data' 自 Py3.12 起推荐；旧版本无此参数，需分支兼容。
+        if sys.version_info >= (3, 12):
+            tf.extractall(dest, filter="data")
+        else:
+            tf.extractall(dest)
+    top = sorted({m.split("/")[0] for m in members if m})
+    print(f"已解包到 {dest}/（含目录: {', '.join(top)}）")
     return 0
 
 
