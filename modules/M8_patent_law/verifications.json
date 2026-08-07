@@ -1,0 +1,494 @@
+{
+  "PATENT_LAW_1_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_2_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "保护客体定义"
+  },
+  "PATENT_LAW_3_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_4_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_5_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "不授予专利的情形"
+  },
+  "PATENT_LAW_6_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "职务发明创造"
+  },
+  "PATENT_LAW_7_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_8_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "合作/委托发明权属"
+  },
+  "PATENT_LAW_9_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "先申请原则"
+  },
+  "PATENT_LAW_10_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "专利权转让"
+  },
+  "PATENT_LAW_11_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "排他权"
+  },
+  "PATENT_LAW_12_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "实施许可合同"
+  },
+  "PATENT_LAW_13_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_14_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_15_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_16_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "发明人署名权"
+  },
+  "PATENT_LAW_17_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "涉外专利申请"
+  },
+  "PATENT_LAW_18_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_19_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_20_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_21_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_22_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "三性（新颖性/创造性/实用性）"
+  },
+  "PATENT_LAW_23_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "外观设计授权要件"
+  },
+  "PATENT_LAW_24_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "不丧失新颖性宽限期"
+  },
+  "PATENT_LAW_25_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "不授予专利的客体"
+  },
+  "PATENT_LAW_26_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "申请文件"
+  },
+  "PATENT_LAW_27_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "外观设计申请文件"
+  },
+  "PATENT_LAW_28_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "申请日确定"
+  },
+  "PATENT_LAW_29_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "优先权"
+  },
+  "PATENT_LAW_30_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "优先权手续"
+  },
+  "PATENT_LAW_31_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "单一性原则"
+  },
+  "PATENT_LAW_32_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_33_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_34_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_35_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_36_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_37_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_38_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_39_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "发明专利授权"
+  },
+  "PATENT_LAW_40_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "实用新型/外观设计授权"
+  },
+  "PATENT_LAW_41_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_42_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "专利权期限"
+  },
+  "PATENT_LAW_43_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_44_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_45_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "无效宣告请求"
+  },
+  "PATENT_LAW_46_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "无效宣告审查"
+  },
+  "PATENT_LAW_47_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "无效宣告效力"
+  },
+  "PATENT_LAW_48_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_49_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_50_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_51_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_52_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_53_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_54_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_55_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_56_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_57_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_58_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_59_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "保护范围"
+  },
+  "PATENT_LAW_60_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "强制许可决定"
+  },
+  "PATENT_LAW_61_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_62_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_63_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_64_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_65_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "损害赔偿"
+  },
+  "PATENT_LAW_66_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_67_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_68_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_69_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "不视为侵权（权利用尽/先用权）"
+  },
+  "PATENT_LAW_70_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_71_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_72_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_73_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_74_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_75_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_76_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_77_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_78_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_79_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_80_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_81_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "PATENT_LAW_82_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  }
+}

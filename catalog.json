@@ -42,7 +42,7 @@
     },
     {
       "id": "M5",
-      "name": "增值税法（2026 新法）",
+      "name": "增值税法（2026-01-01 施行）",
       "name_en": "Value-Added Tax Law of the PRC",
       "law_code": "VAT_LAW",
       "total_articles": 38,
@@ -54,7 +54,7 @@
     },
     {
       "id": "M6",
-      "name": "企业所得税法（2018 修正）",
+      "name": "企业所得税法（2018-12-29 修正）",
       "name_en": "Enterprise Income Tax Law of the PRC",
       "law_code": "EIT_LAW",
       "total_articles": 60,
@@ -66,7 +66,7 @@
     },
     {
       "id": "M7",
-      "name": "个人所得税法（2018 修正）",
+      "name": "个人所得税法（2019-01-01 修正）",
       "law_code": "IIT_LAW",
       "name_en": "Individual Income Tax Law of the PRC",
       "total_articles": 22,
@@ -74,6 +74,18 @@
       "status": "complete",
       "versions": ["2019-01-01"],
       "download_url": "https://github.com/vickywu97/verified-chinese-law-kb/releases/tag/v1.0.0-M7",
+      "price_tier": "free"
+    },
+    {
+      "id": "M8",
+      "name": "专利法（2021-06-01 施行）",
+      "name_en": "Patent Law of the PRC",
+      "law_code": "PATENT_LAW",
+      "total_articles": 82,
+      "verified_articles": 82,
+      "status": "complete",
+      "versions": ["2021-06-01"],
+      "download_url": "https://github.com/vickywu97/verified-chinese-law-kb/releases/tag/v1.0.0-M8",
       "price_tier": "free"
     }
   ]

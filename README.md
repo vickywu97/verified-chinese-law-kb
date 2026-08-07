@@ -86,11 +86,12 @@ python -S tools/validate_module.py --all         # 校验所有模块完整性
 | **M1** | 民法典 | `CIVIL_CODE` | partial（首批 27 条） | 27 / 1260 | 免费 |
 | **M3** | 公司法（2023 修订） | `COMPANY_LAW` | partial（16 条） | 16 / 266 | 免费 |
 | **M4** | 税收征收管理法 | `TAX_ADMIN_LAW` | complete | 94 / 94 | 免费 |
-| **M5** | 增值税法（2026 新法） | `VAT_LAW` | complete | 38 / 38 | 免费 |
-| **M6** | 企业所得税法（2018 修正） | `EIT_LAW` | complete | 60 / 60 | 免费 |
-| **M7** | 个人所得税法（2018 修正） | `IIT_LAW` | complete | 22 / 22 | 免费 |
+| **M5** | 增值税法（2026-01-01 施行） | `VAT_LAW` | complete | 38 / 38 | 免费 |
+| **M6** | 企业所得税法（2018-12-29 修正） | `EIT_LAW` | complete | 60 / 60 | 免费 |
+| **M7** | 个人所得税法（2019-01-01 修正） | `IIT_LAW` | complete | 22 / 22 | 免费 |
+| **M8** | 专利法（2021-06-01 施行） | `PATENT_LAW` | complete | 82 / 82 | 免费 |
 
-**规划中**：M8 专利法（82 条）。新增模块后会在 `catalog.json` 追加条目并发布对应 Release。
+**规划中**：M2 刑法（CRIMINAL_LAW，27 条）等。新增模块后会在 `catalog.json` 追加条目并发布对应 Release。
 
 ---
 
