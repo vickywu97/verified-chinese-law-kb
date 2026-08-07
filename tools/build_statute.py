@@ -11,8 +11,12 @@ build_statute.py — 从 SEED 文件构建模块的 statutes.jsonl 与 verificat
   python -S build_statute.py --seed ../knowledge_base/SEED/company_law.json \
                              --out ../modules/M3_company_law/statutes.jsonl
 
-每条 SEED 记录会被补全为 13 字段的标准条文对象，并生成配套的 verifications.json
+每条 SEED 记录会被补全为标准 statute 记录，并生成配套的 verifications.json
 脚手架（status 由 seed 的 verified 字段决定）。逐条核验交给 verify_kb.py。
+
+署名约定（自 M3 起）：
+  - 默认 **不写具名签署**（verified_by 字段省略），数据只保留「已核验原文」。
+  - 如需保留署名，显式传入 --verified-by "签名人"。
 """
 import argparse
 import datetime
@@ -20,11 +24,17 @@ import json
 import os
 import sys
 
-# 标准 statute 记录的字段集合（与 Bench 项目 schema 完全一致）
+# 核心必需字段（与 validate_module.py 保持一致）
 REQUIRED_FIELDS = [
     "id", "law_code", "article_number", "article_sort_key", "content",
-    "effective_date", "revision_of", "verification_status", "verified_by",
-    "verified_at", "source_url", "source_accessed_at", "notes",
+    "effective_date", "revision_of", "verification_status",
+    "source_url", "source_accessed_at", "notes",
+]
+# 输出字段顺序：核心字段在前，具名签署（verified_by）作为可选尾字段
+FIELD_ORDER = [
+    "id", "law_code", "article_number", "article_sort_key", "content",
+    "effective_date", "revision_of", "verification_status",
+    "verified_at", "verified_by", "source_url", "source_accessed_at", "notes",
 ]
 
 # SEED 中允许直接提供的字段（其余由脚本补全）
@@ -33,8 +43,6 @@ SEED_FIELDS = [
     "effective_date", "revision_of", "source_url", "source_accessed_at",
     "verified", "notes", "id",
 ]
-
-DEFAULT_VERIFIER = "Vicky Wu (律师/税务师/专利代理师)"
 
 
 def build_id(rec):
@@ -50,7 +58,10 @@ def today():
 
 
 def transform(rec, verified_by):
-    """将一条 SEED 记录转换为标准 statute 记录。"""
+    """将一条 SEED 记录转换为标准 statute 记录。
+
+    verified_by 仅在显式提供时才写入（默认空 = 不具名签署，仅保留已核验原文）。
+    """
     out = {}
     for k in SEED_FIELDS:
         if k == "verified":
@@ -60,12 +71,13 @@ def transform(rec, verified_by):
     out["id"] = build_id(rec)
     out["revision_of"] = rec.get("revision_of", None)
     out["verification_status"] = "verified" if rec.get("verified") else "pending"
-    out["verified_by"] = verified_by if rec.get("verified") else ""
     out["verified_at"] = today() if rec.get("verified") else ""
     out["source_accessed_at"] = rec.get("source_accessed_at", today())
     out["notes"] = rec.get("notes", "")
-    # 保证字段顺序稳定
-    ordered = {k: out.get(k, "") for k in REQUIRED_FIELDS}
+    if verified_by:
+        out["verified_by"] = verified_by
+    # 字段顺序稳定：按 FIELD_ORDER 仅保留实际存在的键
+    ordered = {k: out[k] for k in FIELD_ORDER if k in out}
     return ordered
 
 
@@ -74,8 +86,8 @@ def main(argv=None):
     parser.add_argument("--seed", required=True, help="SEED JSON 文件路径")
     parser.add_argument("--out", required=True,
                         help="输出 statutes.jsonl 路径（verifications.json 写入同目录）")
-    parser.add_argument("--verified-by", default=DEFAULT_VERIFIER,
-                        help="已核验条文的具名签署人")
+    parser.add_argument("--verified-by", default="",
+                        help="已核验条文的具名签署人（默认不写，仅保留已核验原文）")
     args = parser.parse_args(argv)
 
     with open(args.seed, "r", encoding="utf-8") as f:
@@ -96,25 +108,21 @@ def main(argv=None):
         for rec in seed:
             obj = transform(rec, args.verified_by)
             for field in REQUIRED_FIELDS:
-                if field not in obj or obj[field] in (None, "") and field not in (
-                    "revision_of", "verified_by", "verified_at", "notes"
-                ):
-                    # revision_of 允许为 null；签名类字段允许在 pending 时为空
-                    if field == "revision_of":
-                        continue
-                    if field in ("verified_by", "verified_at") and obj["verification_status"] == "pending":
-                        continue
-                    print(f"[WARN] 记录 {obj.get('id')} 缺少字段: {field}", file=sys.stderr)
+                if field not in obj:
+                    print(f"[WARN] 记录 {obj.get('id')} 缺少核心字段: {field}",
+                          file=sys.stderr)
                     warnings += 1
             f.write(json.dumps(obj, ensure_ascii=False) + "\n")
-            ledger[obj["id"]] = {
+            entry = {
                 "status": obj["verification_status"],
-                "verified_by": obj["verified_by"],
+                "verified_at": obj["verified_at"],
                 "source": "全国人民代表大会公报" if obj["law_code"] == "CIVIL_CODE"
                           else "官方公报（见 source_url）",
-                "verified_at": obj["verified_at"],
                 "notes": obj.get("notes", ""),
             }
+            if args.verified_by:
+                entry["verified_by"] = args.verified_by
+            ledger[obj["id"]] = entry
 
     with open(ver_path, "w", encoding="utf-8") as f:
         json.dump(ledger, f, ensure_ascii=False, indent=2)

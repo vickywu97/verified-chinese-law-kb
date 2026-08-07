@@ -84,8 +84,9 @@ python -S tools/validate_module.py --all         # 校验所有模块完整性
 | 模块 ID | 法律 | law_code | 状态 | 已核验 / 总条数 | 价格 |
 |---------|------|----------|------|-----------------|------|
 | **M1** | 民法典 | `CIVIL_CODE` | partial（首批 27 条） | 27 / 1260 | 免费 |
+| **M3** | 公司法（2023 修订） | `COMPANY_LAW` | partial（16 条） | 16 / 266 | 免费 |
 
-**规划中（按 4 周路线）**：M3 公司法（2023 修订，266 条）、M4 税法（税收征管法 + 企业所得税法 + 个人所得税法 + 增值税法）、M5 专利法（82 条）。新增模块后会在 `catalog.json` 追加条目并发布对应 Release。
+**规划中（按 4 周路线）**：M4 税法（税收征管法 + 企业所得税法 + 个人所得税法 + 增值税法）、M5 专利法（82 条）。新增模块后会在 `catalog.json` 追加条目并发布对应 Release。
 
 ---
 
@@ -152,13 +153,15 @@ python -S tools/validate_module.py --all         # 校验所有模块完整性
 1. **逐字比对**：正文须与官方来源（全国人大公报 `flk.npc.gov.cn` 或政府网）逐字一致，标点、数字、条文序号均不得有误。
 2. **版本核对**：记录 `effective_date` 与 `revision_of`，确认引用的是**现行生效版本**，而非已修订 / 已废止的旧法。
 3. **失效法识别**：对照 `knowledge_base/deprecated_laws.json`，凡涉及被吸收（如原《合同法》已被《民法典》吸收）或已废止（如《增值税暂行条例》已被《增值税法》取代）的法律名称，须显式标注。
-4. **具名签署**：每条 `verified` 条文必须在 `verifications.json` 中由具名签署人留痕，含来源与日期。
+4. **核验留痕**：每条 `verified` 条文在 `verifications.json` 中记录 `status` / `verified_at` / `source`。具名签署（`verified_by`）为可选——自 M3 起默认省略，数据仅保留已核验原文。
 
 完整标准见 [docs/VERIFICATION_STANDARD.md](docs/VERIFICATION_STANDARD.md)。
 
 ### 7.2 核验人签名
 
 首批 M1 模块全部 27 条均由 **Vicky Wu（律师 / 税务师 / 专利代理师）** 逐字核验并具名签署，核验日期 2026-08-01。
+
+> **署名约定变更（自 M3 起）**：后续模块（M3 公司法及之后）仅保留「已核验原文」，不再写入具名签署字段 `verified_by`，以简化数据、聚焦条文本身。
 
 ---
 

@@ -5,7 +5,8 @@ validate_module.py — 模块完整性校验（CI 调用，纯标准库）。
 
 校验项：
   1. 模块目录必须包含 statutes.jsonl / verifications.json / README.md / CHANGELOG.md
-  2. statutes.jsonl 每行是合法 JSON，且包含全部 13 个标准字段
+  2. statutes.jsonl 每行是合法 JSON，且包含全部核心必需字段
+     （具名签署字段 verified_by / verified_at 为可选，自 M3 起可省略）
   3. 每条文 id 唯一；article_sort_key 为整数；effective_date 为 ISO 日期
   4. revision_of 为 null 或字符串
   5. 每条文在 verifications.json 中存在对应条目，且 status 合法
@@ -28,11 +29,14 @@ import sys
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# 核心必需字段（所有模块都必须有）
 REQUIRED_FIELDS = [
     "id", "law_code", "article_number", "article_sort_key", "content",
-    "effective_date", "revision_of", "verification_status", "verified_by",
-    "verified_at", "source_url", "source_accessed_at", "notes",
+    "effective_date", "revision_of", "verification_status",
+    "source_url", "source_accessed_at", "notes",
 ]
+# 可选字段：具名签署相关，自 M3 起模块可省略（仅保留 verified_at 日期）
+OPTIONAL_FIELDS = ["verified_by", "verified_at"]
 REQUIRED_FILES = ["statutes.jsonl", "verifications.json", "README.md", "CHANGELOG.md"]
 VALID_STATUS = {"verified", "rejected", "pending"}
 ISO_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")

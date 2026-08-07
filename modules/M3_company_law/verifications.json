@@ -1,0 +1,98 @@
+{
+  "COMPANY_LAW_3_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "2023年修订版：新增“公司的合法权益受法律保护，不受侵犯”"
+  },
+  "COMPANY_LAW_4_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "2023年修订版（语义一致）"
+  },
+  "COMPANY_LAW_10_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "由旧法第13条 relocation 而来（旧第13条已删除，relocation 仅作历史注释）"
+  },
+  "COMPANY_LAW_15_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "由旧法第16条 relocation 而来（旧第16条已删除，relocation 仅作历史注释）"
+  },
+  "COMPANY_LAW_20_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "股东权利滥用（新法第20条）"
+  },
+  "COMPANY_LAW_21_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "关联交易限制（新法）"
+  },
+  "COMPANY_LAW_23_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-05",
+    "source": "官方公报（见 source_url）",
+    "notes": "法人人格否认（由旧法第20条 relocation 而来；新法第23条，含横向否认与一人公司）"
+  },
+  "COMPANY_LAW_27_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "出资方式（新法新增股权、债权出资）"
+  },
+  "COMPANY_LAW_34_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "登记对抗要件（新法）"
+  },
+  "COMPANY_LAW_35_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "禁止抽逃出资"
+  },
+  "COMPANY_LAW_49_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "未足额出资责任（新法）"
+  },
+  "COMPANY_LAW_57_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "一人有限责任公司（新法允许一个股东）"
+  },
+  "COMPANY_LAW_63_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "一人公司人格否认"
+  },
+  "COMPANY_LAW_84_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "由旧法第71条 relocation 而来（删除过半数同意；旧第71条已删除，relocation 仅作历史注释）"
+  },
+  "COMPANY_LAW_113_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "股份发行"
+  },
+  "COMPANY_LAW_142_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "股份回购（上市公司收购相关）"
+  }
+}

@@ -15,6 +15,18 @@
       "versions": ["2021-01-01"],
       "download_url": "https://github.com/vickywu97/verified-chinese-law-kb/releases/tag/v1.0.0-M1",
       "price_tier": "free"
+    },
+    {
+      "id": "M3",
+      "name": "公司法",
+      "name_en": "Company Law of the People's Republic of China",
+      "law_code": "COMPANY_LAW",
+      "total_articles": 266,
+      "verified_articles": 16,
+      "status": "partial",
+      "versions": ["2024-07-01"],
+      "download_url": "https://github.com/vickywu97/verified-chinese-law-kb/releases/tag/v1.0.0-M3",
+      "price_tier": "free"
     }
   ]
 }

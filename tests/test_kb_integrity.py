@@ -3,7 +3,7 @@
 """test_kb_integrity.py — 校验知识库数据完整性（纯标准库）。
 
 覆盖：
-  - 每条文 id 唯一且含全部标准字段
+  - 每条文 id 唯一且含全部核心必需字段（具名签署 verified_by / verified_at 为可选）
   - article_sort_key 为整数，effective_date 为 ISO 日期
   - 每条文在 verifications.json 中有对应条目，status 合法
   - verifications.json 无孤立键
@@ -17,11 +17,14 @@ import unittest
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODULES_DIR = os.path.join(REPO_ROOT, "modules")
 
+# 核心必需字段（所有模块都必须有）
 REQUIRED_FIELDS = [
     "id", "law_code", "article_number", "article_sort_key", "content",
-    "effective_date", "revision_of", "verification_status", "verified_by",
-    "verified_at", "source_url", "source_accessed_at", "notes",
+    "effective_date", "revision_of", "verification_status",
+    "source_url", "source_accessed_at", "notes",
 ]
+# 可选字段：具名签署相关，自 M3 起可省略
+OPTIONAL_FIELDS = ["verified_by", "verified_at"]
 VALID_STATUS = {"verified", "rejected", "pending"}
 ISO_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 

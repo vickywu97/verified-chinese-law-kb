@@ -25,13 +25,13 @@
 - 凡条文涉及已被吸收（如《合同法》→《民法典》合同编）或已废止（如《增值税暂行条例》→《增值税法》）的法律，须在 `notes` 或台账中显式标注，避免下游误用旧名。
 - `deprecated_laws.json` 是防幻觉的「名称陷阱」清单，随法律修订持续更新。
 
-### 2.4 具名签署（Signed attestation）
+### 2.4 核验留痕（Attestation ledger）
 - 在 `verifications.json` 中为每条 `verified` 条文写入：
   - `status`: `verified`
-  - `verified_by`: 签署人全名 + 资质
-  - `source`: 来源出版物 / 网站
   - `verified_at`: 核验日期（ISO）
+  - `source`: 来源出版物 / 网站
   - `notes`: 主题标签或差异说明
+- **具名签署（`verified_by`）为可选**：M1 含签署人留痕；自 M3 起默认省略，数据仅保留「已核验原文」。`validate_module.py` 对 `verified_by` / `verified_at` 均为可选校验。
 
 ## 3. 状态机
 
@@ -45,13 +45,13 @@
 ```
 
 - `pending`：尚未核验（不得随 Release 发布）。
-- `verified`：通过四步法并签署。
+- `verified`：通过四步法核验。
 - `rejected`：比对发现不一致，须在 `notes` 记录差异；需修正 SEED 后重新核验。
 
 ## 4. 复核与再审
 
 - 当官方发布法律修订 / 修正案时，须对相关模块重新核验，并新增 `revision_of` 版本。
-- 签署人变更或发现历史误签时，更新台账 `verified_by` / `verified_at` 并记录于模块 `CHANGELOG.md`。
+- 签署人变更或发现历史误签时，更新台账 `verified_at` 并记录于模块 `CHANGELOG.md`。
 
 ## 5. 责任声明
 
