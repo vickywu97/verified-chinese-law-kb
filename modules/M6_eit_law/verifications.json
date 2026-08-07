@@ -1,0 +1,362 @@
+{
+  "EIT_LAW_1_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "在中华人民共和国境内，企业和其他"
+  },
+  "EIT_LAW_2_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业分为居民企业和非居民企业。本"
+  },
+  "EIT_LAW_3_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "居民企业应当就其来源于中国境内、"
+  },
+  "EIT_LAW_4_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业所得税的税率为25％。非居民"
+  },
+  "EIT_LAW_5_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业每一纳税年度的收入总额，减除"
+  },
+  "EIT_LAW_6_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业以货币形式和非货币形式从各种"
+  },
+  "EIT_LAW_7_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "收入总额中的下列收入为不征税收入"
+  },
+  "EIT_LAW_8_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业实际发生的与取得收入有关的、"
+  },
+  "EIT_LAW_9_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业发生的公益性捐赠支出，在年度"
+  },
+  "EIT_LAW_10_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "在计算应纳税所得额时，下列支出不"
+  },
+  "EIT_LAW_11_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "在计算应纳税所得额时，企业按照规"
+  },
+  "EIT_LAW_12_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "在计算应纳税所得额时，企业按照规"
+  },
+  "EIT_LAW_13_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "在计算应纳税所得额时，企业发生的"
+  },
+  "EIT_LAW_14_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业对外投资期间，投资资产的成本"
+  },
+  "EIT_LAW_15_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业使用或者销售存货，按照规定计"
+  },
+  "EIT_LAW_16_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业转让资产，该项资产的净值，准"
+  },
+  "EIT_LAW_17_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业在汇总计算缴纳企业所得税时，"
+  },
+  "EIT_LAW_18_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业纳税年度发生的亏损，准予向以"
+  },
+  "EIT_LAW_19_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "非居民企业取得本法第三条第三款规"
+  },
+  "EIT_LAW_20_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "本章规定的收入、扣除的具体范围、"
+  },
+  "EIT_LAW_21_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "在计算应纳税所得额时，企业财务、"
+  },
+  "EIT_LAW_22_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业的应纳税所得额乘以适用税率，"
+  },
+  "EIT_LAW_23_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业取得的下列所得已在境外缴纳的"
+  },
+  "EIT_LAW_24_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "居民企业从其直接或者间接控制的外"
+  },
+  "EIT_LAW_25_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "国家对重点扶持和鼓励发展的产业和"
+  },
+  "EIT_LAW_26_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业的下列收入为免税收入：（一）"
+  },
+  "EIT_LAW_27_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业的下列所得，可以免征、减征企"
+  },
+  "EIT_LAW_28_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "符合条件的小型微利企业，减按20"
+  },
+  "EIT_LAW_29_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "民族自治地方的自治机关对本民族自"
+  },
+  "EIT_LAW_30_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业的下列支出，可以在计算应纳税"
+  },
+  "EIT_LAW_31_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "创业投资企业从事国家需要重点扶持"
+  },
+  "EIT_LAW_32_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业的固定资产由于技术进步等原因"
+  },
+  "EIT_LAW_33_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业综合利用资源，生产符合国家产"
+  },
+  "EIT_LAW_34_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业购置用于环境保护、节能节水、"
+  },
+  "EIT_LAW_35_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "本法规定的税收优惠的具体办法，由"
+  },
+  "EIT_LAW_36_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "根据国民经济和社会发展的需要，或"
+  },
+  "EIT_LAW_37_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "对非居民企业取得本法第三条第三款"
+  },
+  "EIT_LAW_38_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "对非居民企业在中国境内取得工程作"
+  },
+  "EIT_LAW_39_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "依照本法第三十七条、第三十八条规"
+  },
+  "EIT_LAW_40_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "扣缴义务人每次代扣的税款，应当自"
+  },
+  "EIT_LAW_41_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业与其关联方之间的业务往来，不"
+  },
+  "EIT_LAW_42_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业可以向税务机关提出与其关联方"
+  },
+  "EIT_LAW_43_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业向税务机关报送年度企业所得税"
+  },
+  "EIT_LAW_44_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业不提供与其关联方之间业务往来"
+  },
+  "EIT_LAW_45_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "由居民企业，或者由居民企业和中国"
+  },
+  "EIT_LAW_46_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业从其关联方接受的债权性投资与"
+  },
+  "EIT_LAW_47_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业实施其他不具有合理商业目的的"
+  },
+  "EIT_LAW_48_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "税务机关依照本章规定作出纳税调整"
+  },
+  "EIT_LAW_49_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业所得税的征收管理除本法规定外"
+  },
+  "EIT_LAW_50_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "除税收法律、行政法规另有规定外，"
+  },
+  "EIT_LAW_51_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "非居民企业取得本法第三条第二款规"
+  },
+  "EIT_LAW_52_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "除国务院另有规定外，企业之间不得"
+  },
+  "EIT_LAW_53_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业所得税按纳税年度计算。纳税年"
+  },
+  "EIT_LAW_54_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业所得税分月或者分季预缴。企业"
+  },
+  "EIT_LAW_55_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "企业在年度中间终止经营活动的，应"
+  },
+  "EIT_LAW_56_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "依照本法缴纳的企业所得税，以人民"
+  },
+  "EIT_LAW_57_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "本法公布前已经批准设立的企业，依"
+  },
+  "EIT_LAW_58_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "中华人民共和国政府同外国政府订立"
+  },
+  "EIT_LAW_59_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "国务院根据本法制定实施条例。"
+  },
+  "EIT_LAW_60_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-06",
+    "source": "官方公报（见 source_url）",
+    "notes": "本法自2008年1月1日起施行。"
+  }
+}

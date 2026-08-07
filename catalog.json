@@ -27,6 +27,54 @@
       "versions": ["2024-07-01"],
       "download_url": "https://github.com/vickywu97/verified-chinese-law-kb/releases/tag/v1.0.0-M3",
       "price_tier": "free"
+    },
+    {
+      "id": "M4",
+      "name": "税收征收管理法",
+      "name_en": "Law of the PRC on the Administration of Tax Collection",
+      "law_code": "TAX_ADMIN_LAW",
+      "total_articles": 94,
+      "verified_articles": 94,
+      "status": "complete",
+      "versions": ["2015-04-24"],
+      "download_url": "https://github.com/vickywu97/verified-chinese-law-kb/releases/tag/v1.0.0-M4",
+      "price_tier": "free"
+    },
+    {
+      "id": "M5",
+      "name": "增值税法",
+      "name_en": "Value-Added Tax Law of the PRC",
+      "law_code": "VAT_LAW",
+      "total_articles": 38,
+      "verified_articles": 38,
+      "status": "complete",
+      "versions": ["2026-01-01"],
+      "download_url": "https://github.com/vickywu97/verified-chinese-law-kb/releases/tag/v1.0.0-M5",
+      "price_tier": "free"
+    },
+    {
+      "id": "M6",
+      "name": "企业所得税法",
+      "name_en": "Enterprise Income Tax Law of the PRC",
+      "law_code": "EIT_LAW",
+      "total_articles": 60,
+      "verified_articles": 60,
+      "status": "complete",
+      "versions": ["2018-12-29"],
+      "download_url": "https://github.com/vickywu97/verified-chinese-law-kb/releases/tag/v1.0.0-M6",
+      "price_tier": "free"
+    },
+    {
+      "id": "M7",
+      "name": "个人所得税法",
+      "law_code": "IIT_LAW",
+      "name_en": "Individual Income Tax Law of the PRC",
+      "total_articles": 22,
+      "verified_articles": 22,
+      "status": "complete",
+      "versions": ["2019-01-01"],
+      "download_url": "https://github.com/vickywu97/verified-chinese-law-kb/releases/tag/v1.0.0-M7",
+      "price_tier": "free"
     }
   ]
 }

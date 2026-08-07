@@ -85,14 +85,18 @@ python -S tools/validate_module.py --all         # 校验所有模块完整性
 |---------|------|----------|------|-----------------|------|
 | **M1** | 民法典 | `CIVIL_CODE` | partial（首批 27 条） | 27 / 1260 | 免费 |
 | **M3** | 公司法（2023 修订） | `COMPANY_LAW` | partial（16 条） | 16 / 266 | 免费 |
+| **M4** | 税收征收管理法 | `TAX_ADMIN_LAW` | complete | 94 / 94 | 免费 |
+| **M5** | 增值税法（2026 新法） | `VAT_LAW` | complete | 38 / 38 | 免费 |
+| **M6** | 企业所得税法 | `EIT_LAW` | complete | 60 / 60 | 免费 |
+| **M7** | 个人所得税法 | `IIT_LAW` | complete | 22 / 22 | 免费 |
 
-**规划中（按 4 周路线）**：M4 税法（税收征管法 + 企业所得税法 + 个人所得税法 + 增值税法）、M5 专利法（82 条）。新增模块后会在 `catalog.json` 追加条目并发布对应 Release。
+**规划中**：M8 专利法（82 条）。新增模块后会在 `catalog.json` 追加条目并发布对应 Release。
 
 ---
 
 ## 6. 数据格式
 
-`modules/{模块}/statutes.jsonl`：**每行一个 JSON 对象**，完全沿用 companion benchmark 的 schema（13 个字段）：
+`modules/{模块}/statutes.jsonl`：**每行一个 JSON 对象**，沿用 companion benchmark 的 schema。共 13 个字段，其中 `verified_by`（具名签署）为**可选**字段——自 M3 起默认省略，仅保留已核验原文，故新模块为 12 个字段（见下方「署名约定」）。
 
 ```json
 {
@@ -104,7 +108,6 @@ python -S tools/validate_module.py --all         # 校验所有模块完整性
   "effective_date": "2021-01-01",
   "revision_of": null,
   "verification_status": "verified",
-  "verified_by": "Vicky Wu (律师/税务师/专利代理师)",
   "verified_at": "2026-08-01",
   "source_url": "https://flk.npc.gov.cn/...",
   "source_accessed_at": "2026-07-31",
@@ -124,11 +127,11 @@ python -S tools/validate_module.py --all         # 校验所有模块完整性
 | `effective_date` | 生效日期（ISO `YYYY-MM-DD`） |
 | `revision_of` | 若为新版替代旧版，填被替代版本 id；否则 `null` |
 | `verification_status` | `verified` / `rejected` / `pending` |
-| `verified_by` | 具名签署人 |
 | `verified_at` | 核验日期 |
 | `source_url` | 官方来源（全国人大公报 / 政府网） |
 | `source_accessed_at` | 来源访问日期 |
 | `notes` | 备注（如主题标签、差异说明） |
+| `verified_by` | *可选* 具名签署人（自 M3 起默认省略） |
 
 配套的 `verifications.json` 以条文 `id` 为键保存核验台账：
 

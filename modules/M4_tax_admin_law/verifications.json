@@ -1,0 +1,566 @@
+{
+  "TAX_ADMIN_LAW_1_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_2_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_3_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_4_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "纳税人/扣缴义务人"
+  },
+  "TAX_ADMIN_LAW_5_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_6_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_7_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_8_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_9_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_10_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_11_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_12_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_13_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_14_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_15_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "税务登记"
+  },
+  "TAX_ADMIN_LAW_16_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_17_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_18_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_19_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_20_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_21_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_22_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_23_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_24_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_25_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "纳税申报"
+  },
+  "TAX_ADMIN_LAW_26_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_27_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_28_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_29_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_30_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_31_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "税款缴纳与延期"
+  },
+  "TAX_ADMIN_LAW_32_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "滞纳金"
+  },
+  "TAX_ADMIN_LAW_33_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_34_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_35_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "核定征收"
+  },
+  "TAX_ADMIN_LAW_36_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_37_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_38_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "税收保全措施"
+  },
+  "TAX_ADMIN_LAW_39_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_40_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "强制执行措施"
+  },
+  "TAX_ADMIN_LAW_41_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_42_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_43_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_44_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "离境清税"
+  },
+  "TAX_ADMIN_LAW_45_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "税收优先权"
+  },
+  "TAX_ADMIN_LAW_46_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_47_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_48_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_49_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_50_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_51_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_52_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "税款追征期"
+  },
+  "TAX_ADMIN_LAW_53_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_54_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "税务检查权"
+  },
+  "TAX_ADMIN_LAW_55_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_56_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_57_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_58_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_59_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_60_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_61_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_62_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_63_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "偷税认定与处罚"
+  },
+  "TAX_ADMIN_LAW_64_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "编造虚假计税依据"
+  },
+  "TAX_ADMIN_LAW_65_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_66_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_67_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_68_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_69_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_70_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_71_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_72_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_73_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_74_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_75_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_76_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_77_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_78_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_79_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_80_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_81_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_82_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_83_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_84_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_85_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_86_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-02",
+    "source": "官方公报（见 source_url）",
+    "notes": "处罚时效"
+  },
+  "TAX_ADMIN_LAW_87_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_88_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_89_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_90_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_91_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_92_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_93_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "TAX_ADMIN_LAW_94_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  }
+}

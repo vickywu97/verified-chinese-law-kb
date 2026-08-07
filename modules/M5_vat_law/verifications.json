@@ -1,0 +1,230 @@
+{
+  "VAT_LAW_1_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_2_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_3_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-05",
+    "source": "官方公报（见 source_url）",
+    "notes": "纳税人/应税交易定义"
+  },
+  "VAT_LAW_4_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-05",
+    "source": "官方公报（见 source_url）",
+    "notes": "境内应税交易认定"
+  },
+  "VAT_LAW_5_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-05",
+    "source": "官方公报（见 source_url）",
+    "notes": "视同应税交易"
+  },
+  "VAT_LAW_6_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_7_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_8_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-05",
+    "source": "官方公报（见 source_url）",
+    "notes": "一般计税/简易计税"
+  },
+  "VAT_LAW_9_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-05",
+    "source": "官方公报（见 source_url）",
+    "notes": "小规模纳税人标准（500万）"
+  },
+  "VAT_LAW_10_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-05",
+    "source": "官方公报（见 source_url）",
+    "notes": "税率（13%/9%/6%/0）"
+  },
+  "VAT_LAW_11_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-05",
+    "source": "官方公报（见 source_url）",
+    "notes": "征收率3%"
+  },
+  "VAT_LAW_12_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_13_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_14_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-05",
+    "source": "官方公报（见 source_url）",
+    "notes": "应纳税额（销项抵进项）"
+  },
+  "VAT_LAW_15_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_16_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-05",
+    "source": "官方公报（见 source_url）",
+    "notes": "销项/进项定义"
+  },
+  "VAT_LAW_17_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_18_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_19_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_20_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_21_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-05",
+    "source": "官方公报（见 source_url）",
+    "notes": "留抵退税（结转/退还）"
+  },
+  "VAT_LAW_22_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-05",
+    "source": "官方公报（见 source_url）",
+    "notes": "不得抵扣的进项税额"
+  },
+  "VAT_LAW_23_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-05",
+    "source": "官方公报（见 source_url）",
+    "notes": "起征点免税"
+  },
+  "VAT_LAW_24_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-05",
+    "source": "官方公报（见 source_url）",
+    "notes": "免征增值税项目"
+  },
+  "VAT_LAW_25_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_26_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_27_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_28_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-05",
+    "source": "官方公报（见 source_url）",
+    "notes": "纳税义务发生时间"
+  },
+  "VAT_LAW_29_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_30_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-05",
+    "source": "官方公报（见 source_url）",
+    "notes": "计税期间与申报期限"
+  },
+  "VAT_LAW_31_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_32_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_33_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_34_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_35_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_36_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_37_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "VAT_LAW_38_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-07",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  }
+}
