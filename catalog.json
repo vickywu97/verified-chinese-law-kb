@@ -42,7 +42,7 @@
     },
     {
       "id": "M5",
-      "name": "增值税法",
+      "name": "增值税法（2026 新法）",
       "name_en": "Value-Added Tax Law of the PRC",
       "law_code": "VAT_LAW",
       "total_articles": 38,
@@ -54,7 +54,7 @@
     },
     {
       "id": "M6",
-      "name": "企业所得税法",
+      "name": "企业所得税法（2018 修正）",
       "name_en": "Enterprise Income Tax Law of the PRC",
       "law_code": "EIT_LAW",
       "total_articles": 60,
@@ -66,7 +66,7 @@
     },
     {
       "id": "M7",
-      "name": "个人所得税法",
+      "name": "个人所得税法（2018 修正）",
       "law_code": "IIT_LAW",
       "name_en": "Individual Income Tax Law of the PRC",
       "total_articles": 22,
