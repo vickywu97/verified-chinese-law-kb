@@ -1,98 +1,1598 @@
 {
+  "COMPANY_LAW_1_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_2_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
   "COMPANY_LAW_3_v1": {
     "status": "verified",
-    "verified_at": "2026-08-02",
+    "verified_at": "2026-08-09",
     "source": "官方公报（见 source_url）",
     "notes": "2023年修订版：新增“公司的合法权益受法律保护，不受侵犯”"
   },
   "COMPANY_LAW_4_v1": {
     "status": "verified",
-    "verified_at": "2026-08-02",
+    "verified_at": "2026-08-09",
     "source": "官方公报（见 source_url）",
     "notes": "2023年修订版（语义一致）"
   },
+  "COMPANY_LAW_5_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_6_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_7_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_8_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_9_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
   "COMPANY_LAW_10_v1": {
     "status": "verified",
-    "verified_at": "2026-08-02",
+    "verified_at": "2026-08-09",
     "source": "官方公报（见 source_url）",
     "notes": "由旧法第13条 relocation 而来（旧第13条已删除，relocation 仅作历史注释）"
   },
+  "COMPANY_LAW_11_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_12_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_13_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_14_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
   "COMPANY_LAW_15_v1": {
     "status": "verified",
-    "verified_at": "2026-08-02",
+    "verified_at": "2026-08-09",
     "source": "官方公报（见 source_url）",
     "notes": "由旧法第16条 relocation 而来（旧第16条已删除，relocation 仅作历史注释）"
   },
+  "COMPANY_LAW_16_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_17_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_18_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_19_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
   "COMPANY_LAW_20_v1": {
     "status": "verified",
-    "verified_at": "2026-08-02",
+    "verified_at": "2026-08-09",
     "source": "官方公报（见 source_url）",
     "notes": "股东权利滥用（新法第20条）"
   },
   "COMPANY_LAW_21_v1": {
     "status": "verified",
-    "verified_at": "2026-08-02",
+    "verified_at": "2026-08-09",
     "source": "官方公报（见 source_url）",
     "notes": "关联交易限制（新法）"
   },
+  "COMPANY_LAW_22_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
   "COMPANY_LAW_23_v1": {
     "status": "verified",
-    "verified_at": "2026-08-05",
+    "verified_at": "2026-08-09",
     "source": "官方公报（见 source_url）",
     "notes": "法人人格否认（由旧法第20条 relocation 而来；新法第23条，含横向否认与一人公司）"
   },
+  "COMPANY_LAW_24_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_25_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_26_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
   "COMPANY_LAW_27_v1": {
     "status": "verified",
-    "verified_at": "2026-08-02",
+    "verified_at": "2026-08-09",
     "source": "官方公报（见 source_url）",
     "notes": "出资方式（新法新增股权、债权出资）"
   },
+  "COMPANY_LAW_28_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_29_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_30_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_31_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_32_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_33_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
   "COMPANY_LAW_34_v1": {
     "status": "verified",
-    "verified_at": "2026-08-02",
+    "verified_at": "2026-08-09",
     "source": "官方公报（见 source_url）",
     "notes": "登记对抗要件（新法）"
   },
   "COMPANY_LAW_35_v1": {
     "status": "verified",
-    "verified_at": "2026-08-02",
+    "verified_at": "2026-08-09",
     "source": "官方公报（见 source_url）",
     "notes": "禁止抽逃出资"
   },
+  "COMPANY_LAW_36_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_37_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_38_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_39_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_40_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_41_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_42_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_43_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_44_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_45_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_46_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_47_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_48_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
   "COMPANY_LAW_49_v1": {
     "status": "verified",
-    "verified_at": "2026-08-02",
+    "verified_at": "2026-08-09",
     "source": "官方公报（见 source_url）",
     "notes": "未足额出资责任（新法）"
   },
+  "COMPANY_LAW_50_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_51_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_52_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_53_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_54_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_55_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_56_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
   "COMPANY_LAW_57_v1": {
     "status": "verified",
-    "verified_at": "2026-08-02",
+    "verified_at": "2026-08-09",
     "source": "官方公报（见 source_url）",
     "notes": "一人有限责任公司（新法允许一个股东）"
   },
+  "COMPANY_LAW_58_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_59_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_60_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_61_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_62_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
   "COMPANY_LAW_63_v1": {
     "status": "verified",
-    "verified_at": "2026-08-02",
+    "verified_at": "2026-08-09",
     "source": "官方公报（见 source_url）",
     "notes": "一人公司人格否认"
   },
+  "COMPANY_LAW_64_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_65_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_66_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_67_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_68_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_69_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_70_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_71_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_72_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_73_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_74_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_75_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_76_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_77_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_78_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_79_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_80_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_81_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_82_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_83_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
   "COMPANY_LAW_84_v1": {
     "status": "verified",
-    "verified_at": "2026-08-02",
+    "verified_at": "2026-08-09",
     "source": "官方公报（见 source_url）",
     "notes": "由旧法第71条 relocation 而来（删除过半数同意；旧第71条已删除，relocation 仅作历史注释）"
   },
+  "COMPANY_LAW_85_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_86_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_87_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_88_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_89_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_90_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_91_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_92_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_93_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_94_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_95_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_96_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_97_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_98_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_99_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_100_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_101_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_102_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_103_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_104_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_105_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_106_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_107_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_108_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_109_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_110_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_111_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_112_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
   "COMPANY_LAW_113_v1": {
     "status": "verified",
-    "verified_at": "2026-08-02",
+    "verified_at": "2026-08-09",
     "source": "官方公报（见 source_url）",
     "notes": "股份发行"
   },
+  "COMPANY_LAW_114_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_115_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_116_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_117_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_118_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_119_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_120_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_121_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_122_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_123_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_124_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_125_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_126_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_127_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_128_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_129_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_130_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_131_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_132_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_133_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_134_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_135_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_136_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_137_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_138_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_139_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_140_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_141_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
   "COMPANY_LAW_142_v1": {
     "status": "verified",
-    "verified_at": "2026-08-02",
+    "verified_at": "2026-08-09",
     "source": "官方公报（见 source_url）",
     "notes": "股份回购（上市公司收购相关）"
+  },
+  "COMPANY_LAW_143_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_144_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_145_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_146_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_147_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_148_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_149_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_150_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_151_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_152_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_153_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_154_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_155_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_156_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_157_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_158_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_159_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_160_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_161_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_162_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_163_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_164_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_165_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_166_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_167_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_168_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_169_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_170_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_171_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_172_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_173_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_174_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_175_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_176_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_177_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_178_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_179_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_180_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_181_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_182_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_183_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_184_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_185_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_186_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_187_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_188_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_189_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_190_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_191_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_192_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_193_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_194_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_195_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_196_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_197_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_198_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_199_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_200_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_201_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_202_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_203_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_204_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_205_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_206_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_207_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_208_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_209_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_210_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_211_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_212_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_213_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_214_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_215_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_216_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_217_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_218_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_219_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_220_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_221_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_222_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_223_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_224_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_225_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_226_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_227_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_228_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_229_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_230_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_231_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_232_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_233_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_234_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_235_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_236_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_237_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_238_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_239_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_240_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_241_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_242_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_243_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_244_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_245_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_246_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_247_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_248_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_249_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_250_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_251_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_252_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_253_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_254_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_255_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_256_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_257_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_258_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_259_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_260_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_261_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_262_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_263_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_264_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_265_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "COMPANY_LAW_266_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-09",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
   }
 }

@@ -89,16 +89,19 @@ class TestKBIntegrity(unittest.TestCase):
 
 
 class TestM1Baseline(unittest.TestCase):
-    """初始基线：M1 民法典应有 27 条且全部 verified。"""
+    """M1 民法典基线：完整 1260 条、全部 verified、且保留具名签署（仓库特例）。"""
     def test_m1_count_and_verified(self):
         m1 = os.path.join(MODULES_DIR, "M1_civil_code")
         if not os.path.isdir(m1):
             self.skipTest("M1 模块尚未创建")
         statutes = load_statutes(m1)
-        self.assertEqual(len(statutes), 27, "M1 条文数基线应为 27")
+        self.assertEqual(len(statutes), 1260, "M1 应为完整 1260 条")
         unverified = [o["id"] for o in statutes
                       if o.get("verification_status") != "verified"]
         self.assertEqual(unverified, [], f"M1 存在未核验条文: {unverified}")
+        # M1 为首发模块，保留具名签署字段 verified_by
+        unsigned = [o["id"] for o in statutes if not o.get("verified_by")]
+        self.assertEqual(unsigned, [], f"M1 缺少具名签署: {unsigned[:5]}")
 
 
 if __name__ == "__main__":
