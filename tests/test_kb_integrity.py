@@ -4,7 +4,7 @@
 
 覆盖：
   - 每条文 id 唯一且含全部核心必需字段（具名签署 verified_by / verified_at 为可选）
-  - article_sort_key 为整数，effective_date 为 ISO 日期
+  - article_sort_key 为整数或小数（「之一 / 之二」等补充条文用小数），effective_date 为 ISO 日期
   - 每条文在 verifications.json 中有对应条目，status 合法
   - verifications.json 无孤立键
   - M1 模块应有 27 条且全部 verified（初始基线）
@@ -72,8 +72,8 @@ class TestKBIntegrity(unittest.TestCase):
                 rid = o["id"]
                 self.assertNotIn(rid, ids, f"{name}: 重复 id {rid}")
                 ids.add(rid)
-                self.assertIsInstance(o["article_sort_key"], int,
-                                     f"{name}: {rid} article_sort_key 非整数")
+                self.assertIsInstance(o["article_sort_key"], (int, float),
+                                     f"{name}: {rid} article_sort_key 非数值")
                 self.assertTrue(ISO_DATE.match(str(o["effective_date"])),
                                 f"{name}: {rid} effective_date 非法")
                 self.assertIn(o["verification_status"], VALID_STATUS,

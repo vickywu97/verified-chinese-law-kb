@@ -84,6 +84,7 @@ python -S tools/validate_module.py --all         # 校验所有模块完整性
 | 模块 ID | 法律 | law_code | 状态 | 已核验 / 总条数 | 价格 |
 |---------|------|----------|------|-----------------|------|
 | **M1** | 民法典 | `CIVIL_CODE` | partial（首批 27 条） | 27 / 1260 | 免费 |
+| **M2** | 刑法（1997-10-01 施行，2024-03-01 最新修正） | `CRIMINAL_LAW` | complete | 505 / 505 | 免费 |
 | **M3** | 公司法（2023 修订） | `COMPANY_LAW` | partial（16 条） | 16 / 266 | 免费 |
 | **M4** | 税收征收管理法 | `TAX_ADMIN_LAW` | complete | 94 / 94 | 免费 |
 | **M5** | 增值税法（2026-01-01 施行） | `VAT_LAW` | complete | 38 / 38 | 免费 |
@@ -91,7 +92,7 @@ python -S tools/validate_module.py --all         # 校验所有模块完整性
 | **M7** | 个人所得税法（2019-01-01 修正） | `IIT_LAW` | complete | 22 / 22 | 免费 |
 | **M8** | 专利法（2021-06-01 施行） | `PATENT_LAW` | complete | 82 / 82 | 免费 |
 
-**规划中**：M2 刑法（CRIMINAL_LAW，27 条）等。新增模块后会在 `catalog.json` 追加条目并发布对应 Release。
+**规划中**：Bench 源 8 部法律（民法典、公司法、税收征收管理法、增值税法、企业所得税法、个人所得税法、专利法、刑法）已全部覆盖。后续可扩展其他高频法律（如 民事诉讼法、行政诉讼法、劳动合同法、道路交通安全法等）。新增模块后会在 `catalog.json` 追加条目并发布对应 Release。
 
 ---
 
@@ -123,7 +124,7 @@ python -S tools/validate_module.py --all         # 校验所有模块完整性
 | `id` | 全局唯一：`{law_code}_{article_sort_key}_v{n}` |
 | `law_code` | 法律代码，见 `knowledge_base/laws_index.json` |
 | `article_number` | 条文编号原文（如「第五百八十四条」） |
-| `article_sort_key` | 用于排序的整数序号 |
+| `article_sort_key` | 用于排序的数值序号（整数或小数；小数用于「之一 / 之二」等补充条文，如刑法第 17 条之一为 `17.001`） |
 | `content` | 条文正文（逐字核验） |
 | `effective_date` | 生效日期（ISO `YYYY-MM-DD`） |
 | `revision_of` | 若为新版替代旧版，填被替代版本 id；否则 `null` |

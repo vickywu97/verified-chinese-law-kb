@@ -1,0 +1,3032 @@
+{
+  "CRIMINAL_LAW_1_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_2_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_3_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_4_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_5_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_6_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_7_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_8_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_9_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_10_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_11_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_12_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_13_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "犯罪概念"
+  },
+  "CRIMINAL_LAW_14_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "故意犯罪"
+  },
+  "CRIMINAL_LAW_15_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "过失犯罪"
+  },
+  "CRIMINAL_LAW_16_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_17_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "刑事责任年龄"
+  },
+  "CRIMINAL_LAW_17.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_18_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_19_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_20_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "正当防卫"
+  },
+  "CRIMINAL_LAW_21_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_22_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "犯罪预备"
+  },
+  "CRIMINAL_LAW_23_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "犯罪未遂"
+  },
+  "CRIMINAL_LAW_24_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "犯罪中止"
+  },
+  "CRIMINAL_LAW_25_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "共同犯罪"
+  },
+  "CRIMINAL_LAW_26_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "主犯与犯罪集团"
+  },
+  "CRIMINAL_LAW_27_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_28_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_29_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "教唆犯"
+  },
+  "CRIMINAL_LAW_30_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_31_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_32_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_33_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_34_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_35_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_36_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_37_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_37.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_38_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_39_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_40_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_41_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_42_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_43_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_44_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_45_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_46_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_47_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_48_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "死刑适用"
+  },
+  "CRIMINAL_LAW_49_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_50_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_51_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_52_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_53_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_54_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_55_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_56_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_57_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_58_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_59_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_60_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_61_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_62_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_63_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_64_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_65_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_66_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_67_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "自首"
+  },
+  "CRIMINAL_LAW_68_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_69_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_70_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_71_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_72_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_73_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_74_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_75_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_76_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_77_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_78_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_79_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_80_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_81_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_82_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_83_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_84_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_85_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_86_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_87_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_88_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_89_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_90_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_91_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_92_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_93_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_94_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_95_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_96_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_97_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_98_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_99_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_100_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_101_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_102_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_103_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_104_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_105_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_106_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_107_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_108_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_109_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_110_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_111_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_112_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_113_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_114_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_115_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_116_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_117_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_118_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_119_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_120_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_120.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_120.002_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_120.003_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_120.004_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_120.005_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_120.006_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_121_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_122_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_123_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_124_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_125_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_126_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_127_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_128_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_129_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_130_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_131_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_132_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_133_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_133.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_133.002_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_134_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_134.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_135_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_135.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_136_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_137_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_138_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_139_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_139.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_140_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_141_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_142_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_142.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_143_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_144_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_145_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_146_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_147_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_148_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_149_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_150_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_151_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_152_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_153_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_154_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_155_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_156_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_157_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_158_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_159_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_160_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_161_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_162_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_162.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_162.002_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_163_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_164_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_165_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_166_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_167_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_168_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_169_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_169.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_170_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_171_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_172_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_173_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_174_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_175_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_175.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_176_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_177_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_177.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_178_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_179_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_180_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_181_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_182_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_183_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_184_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_185_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_185.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_186_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_187_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_188_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_189_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_190_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_191_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_192_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_193_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_194_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_195_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_196_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_197_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_198_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_199_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_200_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_201_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_202_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_203_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_204_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_205_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_205.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_206_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_207_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_208_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_209_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_210_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_210.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_211_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_212_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_213_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_214_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_215_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_216_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_217_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_218_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_219_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_219.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_220_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_221_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_222_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_223_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_224_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_224.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_225_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_226_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_227_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_228_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_229_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_230_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_231_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_232_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "故意杀人罪"
+  },
+  "CRIMINAL_LAW_233_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_234_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "故意伤害罪"
+  },
+  "CRIMINAL_LAW_2341_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "组织出卖人体器官罪"
+  },
+  "CRIMINAL_LAW_235_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_236_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_236.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_237_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_238_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_239_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_240_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_241_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_242_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_243_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_244_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_244.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_245_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_246_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_247_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_248_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_249_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_250_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_251_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_252_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_253_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_253.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_254_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_255_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_256_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_257_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_258_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_259_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_260_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_260.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_261_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_262_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_262.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_262.002_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_263_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "抢劫罪"
+  },
+  "CRIMINAL_LAW_264_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "盗窃罪"
+  },
+  "CRIMINAL_LAW_265_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_266_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "诈骗罪"
+  },
+  "CRIMINAL_LAW_267_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_268_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_269_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_270_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_271_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "职务侵占罪"
+  },
+  "CRIMINAL_LAW_272_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "挪用资金罪"
+  },
+  "CRIMINAL_LAW_273_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_274_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_275_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_276_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_276.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_277_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_278_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_279_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_280_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_280.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_280.002_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_281_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_282_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_283_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_284_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_284.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_285_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_286_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_286.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_287_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_287.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_287.002_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_288_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_289_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_290_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_291_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_291.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_291.002_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_292_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_293_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_293.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_294_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_295_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_296_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_297_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_298_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_299_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_299.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_300_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_301_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_302_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "盗窃、侮辱、故意毁坏尸体、尸骨、灰罪"
+  },
+  "CRIMINAL_LAW_303_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_304_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_305_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_306_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_307_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_307.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_308_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_308.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_309_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_310_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_311_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_312_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_313_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_314_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_315_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_316_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_317_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_318_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_319_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_320_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_321_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_322_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_323_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_324_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_325_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_326_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_327_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_328_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_329_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_330_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_331_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_332_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_333_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_334_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_334.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_335_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_336_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_336.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_337_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_338_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_339_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_340_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_341_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_342_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_342.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_343_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_344_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_344.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_345_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_346_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_347_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_348_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_349_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_350_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_351_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_352_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_353_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_354_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_355_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_355.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_356_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_357_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_358_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_359_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_360_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_361_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_362_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_363_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_364_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_365_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_366_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_367_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_368_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_369_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_370_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_371_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_372_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_373_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_374_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_375_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_376_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_377_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_378_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_379_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_380_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_381_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_382_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "贪污罪"
+  },
+  "CRIMINAL_LAW_383_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_384_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "挪用公款罪"
+  },
+  "CRIMINAL_LAW_385_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "受贿罪"
+  },
+  "CRIMINAL_LAW_386_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_387_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_388_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_388.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_389_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "行贿罪"
+  },
+  "CRIMINAL_LAW_390_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_390.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_391_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_392_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_393_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_394_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_395_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_396_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_397_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "滥用职权/玩忽职守罪"
+  },
+  "CRIMINAL_LAW_398_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_399_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_399.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_400_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_401_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_402_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_403_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_404_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_405_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_406_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_407_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_408_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_408.001_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_409_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_410_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_411_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_412_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_413_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_414_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_415_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_416_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_417_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_418_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_419_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_420_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_421_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_422_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_423_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_424_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_425_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_426_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_427_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_428_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_429_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_430_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_431_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_432_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_433_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_434_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_435_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_436_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_437_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_438_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_439_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_440_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_441_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_442_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_443_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_444_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_445_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_446_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_447_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_448_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_449_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_450_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_451_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  },
+  "CRIMINAL_LAW_452_v1": {
+    "status": "verified",
+    "verified_at": "2026-08-08",
+    "source": "官方公报（见 source_url）",
+    "notes": "源经专家确认完整（非截断）"
+  }
+}

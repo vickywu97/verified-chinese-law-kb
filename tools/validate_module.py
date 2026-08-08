@@ -85,8 +85,8 @@ def validate_one(module_dir, strict=False):
             errors.append(f"[{name}] 重复 id: {rid}")
         ids.add(rid)
         sk = o.get("article_sort_key")
-        if not isinstance(sk, int) or isinstance(sk, bool):
-            errors.append(f"[{name}] {rid} article_sort_key 不是整数: {sk!r}")
+        if not isinstance(sk, (int, float)) or isinstance(sk, bool):
+            errors.append(f"[{name}] {rid} article_sort_key 非数值: {sk!r}")
         ed = o.get("effective_date")
         if ed is not None and not ISO_DATE.match(str(ed)):
             errors.append(f"[{name}] {rid} effective_date 非 ISO 日期: {ed!r}")
