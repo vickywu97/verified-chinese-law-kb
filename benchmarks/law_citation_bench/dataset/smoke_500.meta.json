@@ -1,0 +1,16 @@
+{
+  "file": "smoke_500.jsonl",
+  "seed": 20260809,
+  "n_questions": 500,
+  "total_verified_statutes": 2327,
+  "tasks": {
+    "T1": 200,
+    "T2": 200,
+    "T3": 100
+  },
+  "difficulty": {
+    "easy": 123,
+    "medium": 196,
+    "hard": 181
+  }
+}
