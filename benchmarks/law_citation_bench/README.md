@@ -40,12 +40,18 @@ python3 run.py --baseline all
 #    -> leaderboard.csv  leaderboard.json  leaderboard.md  leaderboard.html
 
 # 3) （可选）接入真实模型 —— 仅"调用模型"联网，评分/报告仍离线
-export LAW_BENCH_OPENAI_KEY="sk-..."
-python3 run.py --model openai --model-name gpt-4o-mini
-#    会同时跑 random + always-first 基线作对照，统一写入上述四个文件
+#    适配器走 OpenAI 兼容协议，已内置 4 家国产厂商预设（无需 OpenAI key）：
+python3 run.py --model qwen      # 阿里 通义千问  (key: DASHSCOPE_API_KEY)
+python3 run.py --model deepseek  # DeepSeek       (key: DEEPSEEK_API_KEY)
+python3 run.py --model zhipu     # 智谱 GLM       (key: ZHIPU_API_KEY)
+python3 run.py --model kimi      # Kimi/Moonshot  (key: MOONSHOT_API_KEY)
+python3 run.py --model openai    # OpenAI         (key: LAW_BENCH_OPENAI_KEY)
+#    以上任一命令都会同时跑 random + always-first 基线作对照，统一写四个文件。
+#    key 也可统一用 --api-key 传入，或用通用环境变量 LAW_BENCH_API_KEY。
+#    指定具体模型（覆盖厂商默认）：python3 run.py --model qwen --model-name qwen-max
 ```
 
-要求 Python ≥ 3.8（`python -S` 亦可，无任何第三方依赖；真实模型适配器仅在显式 `--model openai` 时懒加载 `requests`）。
+要求 Python ≥ 3.8（`python -S` 亦可，无任何第三方依赖；真实模型适配器仅在显式 `--model <provider>` 时懒加载 `requests`）。
 
 ## 当前哑基线结果（证明基准可区分好坏）
 
@@ -72,7 +78,7 @@ law_citation_bench/
   adapters/
     base.py            # ModelAdapter 接口（generate(prompt)->str）
     dummy.py           # 校准基线：random / always-first
-    openai_stub.py     # M2：真实 API 适配器（--model openai 启用，懒加载 requests）
+    openai_stub.py     # M2：真实 API 适配器（OpenAI 兼容；预设 qwen/deepseek/zhipu/kimi/openai，懒加载 requests）
   dataset/
     smoke_500.jsonl    # 生成的评测集
     smoke_500.meta.json# 生成参数与统计（可复现凭证）
@@ -95,7 +101,7 @@ law_citation_bench/
 |--------|------|------|
 | M0 | 数据集生成 + 哑基线跑通 | ✅ 已实现 |
 | M1 | `score.py` 正式版 + 难度分层评分 | ✅ 已实现 |
-| M2 | 接入 1–2 个真实模型 API（用 `openai_stub.py`） | 🔌 已接线，待用户 key 出首版跑分 |
+| M2 | 接入真实模型 API（OpenAI 兼容，预设 qwen/deepseek/zhipu/kimi/openai） | ✅ 已接线，自备 key 即出跑分 |
 | M3 | 报告模板（Markdown/HTML）+ 难度分层可展示 leaderboard | ✅ 已实现 |
 
 > 发布建议：未来可作为独立 repo `law-citation-bench` 发布（评测集与 KB 解耦），本仓库 README 互引。当前阶段以子目录形式落地以便复用 KB。

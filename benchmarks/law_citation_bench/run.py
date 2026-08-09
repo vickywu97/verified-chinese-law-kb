@@ -5,13 +5,17 @@ Flow: dataset -> per-record prompt -> ModelAdapter.generate -> score_record
       -> aggregate -> leaderboard.csv / .json / .md / .html.
 
 Default baselines are offline calibration models (no API). Plug a real model
-with ``--model openai`` (requires a user-supplied key; never committed).
+with ``--model <provider>`` (requires a user-supplied key; never committed).
+Supported providers (all OpenAI-compatible): openai, qwen, deepseek, zhipu, kimi.
 
 Usage:
     python3 run.py                          # random baseline + report
     python3 run.py --baseline all           # random + always-first + report
-    python3 run.py --model openai --model-name gpt-4o-mini   # real model + baselines
-    python3 run.py --baseline first --out my.csv
+    python3 run.py --model qwen             # 阿里通义千问 (key via DASHSCOPE_API_KEY)
+    python3 run.py --model deepseek         # DeepSeek (DEEPSEEK_API_KEY)
+    python3 run.py --model zhipu            # 智谱 GLM (ZHIPU_API_KEY)
+    python3 run.py --model kimi             # Kimi/Moonshot (MOONSHOT_API_KEY)
+    python3 run.py --model qwen --model-name qwen-max --api-key sk-...
 """
 import argparse
 import csv
@@ -132,15 +136,21 @@ def resolve_adapters(baseline, kb, args):
         adapters = [AlwaysFirstBaseline(kb)]
     else:  # random (default)
         adapters = [RandomBaseline(kb)]
-    if getattr(args, "model", None) == "openai":
-        api_key = getattr(args, "api_key", None) or os.environ.get("LAW_BENCH_OPENAI_KEY")
-        if not api_key:
-            sys.exit("ERROR: --model openai 需要 API key（--api-key 或环境变量 LAW_BENCH_OPENAI_KEY）")
-        model = getattr(args, "model_name", None) or os.environ.get(
-            "LAW_BENCH_OPENAI_MODEL", "gpt-4o-mini")
-        base_url = getattr(args, "base_url", None) or os.environ.get(
-            "LAW_BENCH_OPENAI_BASE", "https://api.openai.com/v1")
-        adapters.append(OpenAIAdapter(api_key=api_key, model=model, base_url=base_url))
+    provider = getattr(args, "model", None)
+    if provider:
+        # Imported here so the stdlib-only path never touches this module.
+        from adapters.openai_stub import resolve_provider
+        try:
+            adapters.append(resolve_provider(
+                provider,
+                api_key=getattr(args, "api_key", None),
+                model_name=getattr(args, "model_name", None),
+                base_url=getattr(args, "base_url", None),
+            ))
+        except RuntimeError as e:
+            sys.exit("ERROR: " + str(e))
+        except ValueError as e:
+            sys.exit("ERROR: " + str(e))
     return adapters
 
 
@@ -170,7 +180,11 @@ def main():
     ap = argparse.ArgumentParser(description="Run law-citation-bench")
     ap.add_argument("--dataset", default=os.path.join(HERE, "dataset", "smoke_500.jsonl"))
     ap.add_argument("--baseline", choices=["random", "first", "all"], default="random")
-    ap.add_argument("--model", choices=[None, "openai"], default=None)
+    ap.add_argument("--model",
+                    choices=[None, "openai", "qwen", "deepseek", "zhipu", "kimi"],
+                    default=None,
+                    help="real-model provider (OpenAI-compatible): "
+                         "openai/qwen/deepseek/zhipu/kimi")
     ap.add_argument("--api-key", default=None)
     ap.add_argument("--model-name", default=None)
     ap.add_argument("--base-url", default=None)
