@@ -1,7 +1,7 @@
-# law-citation-bench · 方向 A 评测基准（M0 原型）
+# law-citation-bench · 方向 A 评测基准（M0–M3）
 
 > 在 [verified-chinese-law-kb](../../)（2327 条逐字核验条文）之上，构建**离线可跑、纯标准库、可量化模型法条引用能力**的评测基准。
-> 本目录是设计草图（[docs/benchmark-design-A.md](../../docs/benchmark-design-A.md)）的 **M0 可运行原型**：已能生成可复现数据集，并用哑基线跑出 leaderboard。
+> 本目录是设计草图（[docs/benchmark-design-A.md](../../docs/benchmark-design-A.md)）的落地实现：**M0** 可复现数据集、**M1** 哑基线跑通、**M3** 难度分层与 Markdown/HTML 报告均已就绪；**M2** 真实模型适配器已接线，用户自备 key 即可出跑分。
 
 ## 定位
 
@@ -35,21 +35,30 @@
 python3 build_dataset.py
 #    -> dataset/smoke_500.jsonl  +  dataset/smoke_500.meta.json
 
-# 2) 用哑基线跑分，产出 leaderboard.csv
-python3 run.py --baseline random     # 随机基线
-python3 run.py --baseline first      # 永远返回首条基线
+# 2) 用哑基线跑分，并产出完整报告（csv / json / md / html）
+python3 run.py --baseline all
+#    -> leaderboard.csv  leaderboard.json  leaderboard.md  leaderboard.html
+
+# 3) （可选）接入真实模型 —— 仅"调用模型"联网，评分/报告仍离线
+export LAW_BENCH_OPENAI_KEY="sk-..."
+python3 run.py --model openai --model-name gpt-4o-mini
+#    会同时跑 random + always-first 基线作对照，统一写入上述四个文件
 ```
 
-要求 Python ≥ 3.8（`python -S` 亦可，无任何第三方依赖）。
+要求 Python ≥ 3.8（`python -S` 亦可，无任何第三方依赖；真实模型适配器仅在显式 `--model openai` 时懒加载 `requests`）。
 
 ## 当前哑基线结果（证明基准可区分好坏）
+
+> 下列为 `run.py --baseline all` 在 `smoke_500.jsonl` 上的确定性结果（复跑一致）。
 
 | model | overall | T1 | T2(recall@5) | T3(acc) | T3(macro_f1) |
 |-------|--------:|---:|-------------:|--------:|-------------:|
 | random-baseline | 0.072 | 0.035 | 0.000 | 0.290 | 0.210 |
 | always-first-baseline | 0.083 | 0.042 | 0.000 | 0.330 | 0.165 |
 
-哑基线接近随机水平（T2 检索几乎全错、T3 靠猜），说明基准**对噪声模型有区分度**——真实法律模型应显著高于此。
+哑基线接近随机水平（T2 检索几乎全错、T3 靠猜），说明基准**对噪声模型有区分度**——真实法律模型应显著高于此。`leaderboard.md` / `leaderboard.html` 另含**难度分层（易/中/难）与任务×难度矩阵**，便于展示"模型在哪类题上失分"。
+
+**难度判定**：T1/T2 按条文长度分易/中/难；T3 命中=易、篡改=中、未命中（超范围引证）=难。
 
 ## 目录结构
 
@@ -58,15 +67,19 @@ law_citation_bench/
   common.py            # KB 加载 + 法律名映射（真值来源 = ../modules）
   build_dataset.py     # M0：模板法从 KB 生成 500 题（离线、可复现）
   score.py             # 字符级F1 / Recall@5 / MRR / Macro-F1，纯 stdlib
-  run.py               # 编排：dataset→adapter→score→leaderboard.csv
+  report.py            # M3：leaderboard.json -> Markdown / HTML 报告
+  run.py               # 编排：dataset→adapter→score→leaderboard.{csv,json,md,html}
   adapters/
     base.py            # ModelAdapter 接口（generate(prompt)->str）
     dummy.py           # 校准基线：random / always-first
-    openai_stub.py     # 真实 API 适配器模板（默认不启用，保持离线）
+    openai_stub.py     # M2：真实 API 适配器（--model openai 启用，懒加载 requests）
   dataset/
     smoke_500.jsonl    # 生成的评测集
     smoke_500.meta.json# 生成参数与统计（可复现凭证）
-  leaderboard.csv      # 最近一次运行结果
+  leaderboard.csv      # 最近一次运行结果（扁平、机读）
+  leaderboard.json     # 完整明细（含任务×难度矩阵）
+  leaderboard.md       # M3 报告（Markdown，可贴 README/Notion）
+  leaderboard.html     # M3 报告（HTML，单页可展示）
   README.md
 ```
 
@@ -80,9 +93,9 @@ law_citation_bench/
 
 | 里程碑 | 内容 | 状态 |
 |--------|------|------|
-| M0 | 数据集生成 + 哑基线跑通 | ✅ 本次完成 |
-| M1 | `score.py` 正式版 + 难度分层报告 | 待做 |
-| M2 | 接入 1–2 个真实模型 API（用 `openai_stub.py` 模板） | 待做 |
-| M3 | 报告模板（Markdown/HTML）+ 可展示 leaderboard | 待做 |
+| M0 | 数据集生成 + 哑基线跑通 | ✅ 已实现 |
+| M1 | `score.py` 正式版 + 难度分层评分 | ✅ 已实现 |
+| M2 | 接入 1–2 个真实模型 API（用 `openai_stub.py`） | 🔌 已接线，待用户 key 出首版跑分 |
+| M3 | 报告模板（Markdown/HTML）+ 难度分层可展示 leaderboard | ✅ 已实现 |
 
 > 发布建议：未来可作为独立 repo `law-citation-bench` 发布（评测集与 KB 解耦），本仓库 README 互引。当前阶段以子目录形式落地以便复用 KB。

@@ -1,6 +1,6 @@
 # 方向 A 设计草图：法条引用准确性评测基准（law-citation-bench）
 
-> 状态：**M0 已实现（见 `benchmarks/law_citation_bench/`）**。本文是方案草图，M0 已落地可运行原型，M1–M3 待续。
+> 状态：**M0 / M1 / M3 已实现（见 `benchmarks/law_citation_bench/`）；M2 已接线待 key**。本文是方案草图，M0 可运行原型 + M1 哑基线跑通 + M3 难度分层与报告模板均已落地；真实模型适配器（`adapters/openai_stub.py`）已接线，用户自备 key 即可出首版真实跑分。
 > 目标：在 `verified-chinese-law-kb`（2327 条逐字核验条文）之上，构建一个**离线可跑、纯标准库、可量化模型法条能力**的评测基准。
 
 ---
@@ -76,12 +76,12 @@ benchmarks/
 
 ## 8. 交付里程碑（若开工）
 
-| 里程碑 | 内容 | 产出 |
-|--------|------|------|
-| M0 | `build_dataset.py` 从 KB 生成 500 题 smoke test | 可复现数据集 |
-| M1 | `score.py` ＋ 哑基线跑通 | baseline leaderboard |
-| M2 | 接 1–2 个真实模型 API | 首版真实跑分 |
-| M3 | 难度分层 ＋ 报告模板（Markdown/HTML） | 可展示报告 |
+| 里程碑 | 内容 | 产出 | 状态 |
+|--------|------|------|------|
+| M0 | `build_dataset.py` 从 KB 生成 500 题 smoke test | 可复现数据集 | ✅ 已实现 |
+| M1 | `score.py` ＋ 哑基线跑通 | baseline leaderboard | ✅ 已实现 |
+| M2 | 接 1–2 个真实模型 API | 首版真实跑分 | 🔌 已接线（`--model openai`，待用户 key） |
+| M3 | 难度分层 ＋ 报告模板（Markdown/HTML） | 可展示报告 | ✅ 已实现 |
 
 ## 9. 风险 / 单点故障（SPOF）
 

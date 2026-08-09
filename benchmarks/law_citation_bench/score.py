@@ -110,17 +110,30 @@ def score_record(record, pred_text):
 # Aggregation
 # --------------------------------------------------------------------------
 def aggregate(records, scored):
-    """Return per-task and per-difficulty aggregates from (record, result) pairs."""
+    """Return per-task, per-difficulty, and task×difficulty aggregates.
+
+    Output shape:
+      {
+        "overall": float,
+        "tasks":      {T1:{n,mean}, T2:{n,mean,recall@5,mrr}, T3:{n,mean,macro_f1}},
+        "difficulty": {easy:{n,mean}, medium:{...}, hard:{...}},
+        "task_x_diff":{T1:{easy:{n,mean},...}, ...}   # M3 cross-breakdown
+      }
+    """
     by_task = {}
     by_diff = {}
+    task_x_diff = {}
     for rec, res in zip(records, scored):
         t = rec["task"]
         d = rec["difficulty"]
         by_task.setdefault(t, []).append(res["score"])
         by_diff.setdefault(d, []).append(res["score"])
+        task_x_diff.setdefault(t, {}).setdefault(d, []).append(res["score"])
     out = {"overall": _mean([s["score"] for s in scored]) if scored else 0.0,
            "tasks": {t: _stats(v) for t, v in by_task.items()},
-           "difficulty": {d: _stats(v) for d, v in by_diff.items()}}
+           "difficulty": {d: _stats(v) for d, v in by_diff.items()},
+           "task_x_diff": {t: {d: _stats(v) for d, v in task_x_diff[t].items()}
+                           for t in task_x_diff}}
     # T2 extra metrics
     t2 = [(rec, res) for rec, res in zip(records, scored) if rec["task"] == "T2"]
     if t2:

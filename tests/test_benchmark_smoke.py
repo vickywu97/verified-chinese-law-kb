@@ -36,12 +36,18 @@ class BenchmarkSmokeTest(unittest.TestCase):
             for r in rows:
                 fh.write(json.dumps(r, ensure_ascii=False) + "\n")
         out = tempfile.mktemp(suffix=".csv")
+        out_dir = os.path.dirname(out)
         row = run(tmp_ds, "random", out, 0)
         self.assertIn("overall", row)
         self.assertTrue(os.path.isfile(out))
         with open(out, encoding="utf-8") as fh:
             reader = csv.DictReader(fh)
             self.assertIn("model", next(reader))
+        # M3 report artifacts must also be produced (offline, no network)
+        for art in ("leaderboard.json", "leaderboard.md", "leaderboard.html"):
+            self.assertTrue(
+                os.path.isfile(os.path.join(out_dir, art)),
+                "missing report artifact: %s" % art)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>law-citation-bench Leaderboard</title>
+<style>
+  :root { --bg:#f7f8fa; --card:#ffffff; --ink:#1a1a1a; --muted:#666;
+          --line:#e3e6ea; --accent:#2f6df6; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+          font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
+          "Hiragino Sans GB","Microsoft YaHei",sans-serif; line-height:1.5; }
+  .wrap { max-width:960px; margin:0 auto; padding:32px 20px 64px; }
+  h1 { font-size:24px; margin:0 0 4px; }
+  .meta { color:var(--muted); font-size:13px; margin-bottom:24px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px;
+           padding:18px 20px; margin-bottom:20px; box-shadow:0 1px 2px rgba(0,0,0,.04); }
+  h2 { font-size:17px; margin:0 0 12px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); }
+  th { color:var(--muted); font-weight:600; }
+  tbody tr:hover { background:#f0f4ff; }
+  .note { color:var(--muted); font-size:12.5px; margin-top:10px; }
+</style></head>
+<body><div class="wrap">
+<h1>law-citation-bench · 跑分榜</h1>
+<div class="meta">数据集 smoke_500.jsonl · 题量 500 · 生成时间 2026-08-09T13:42:07 · 难度分布 易 123 / 中 196 / 难 181</div>
+
+<div class="card"><h2>综合跑分</h2>
+<table><thead><tr><th>模型</th><th>n</th><th>Overall</th><th>T1 接地</th>
+<th>T2 检索</th><th>T2@5</th><th>T3 识别</th><th>T3-macroF1</th></tr></thead>
+<tbody><tr><td>random-baseline</td><td>500</td><td>0.0720</td><td>0.0350</td><td>0.0000</td><td>0.0000</td><td>0.2900</td><td>0.2102</td></tr><tr><td>always-first-baseline</td><td>500</td><td>0.0826</td><td>0.0415</td><td>0.0000</td><td>0.0000</td><td>0.3300</td><td>0.1654</td></tr></tbody></table></div>
+
+<div class="card"><h2>难度分层（Overall by 难度）</h2>
+<table><thead><tr><th>模型</th><th>易</th><th>中</th><th>难</th></tr></thead>
+<tbody><tr><td>random-baseline</td><td>0.2001</td><td>0.0454</td><td>0.0137</td></tr><tr><td>always-first-baseline</td><td>0.2867</td><td>0.0173</td><td>0.0146</td></tr></tbody></table></div>
+
+<div class="card"><h2>任务 × 难度 矩阵（Overall）</h2>
+<table><thead><tr><th>模型</th><th>任务</th><th>易</th><th>中</th><th>难</th></tr></thead>
+<tbody><tr><td>random-baseline</td><td>T1 引用接地</td><td>0.0359</td><td>0.0358</td><td>0.0334</td></tr><tr><td>random-baseline</td><td>T2 条文检索</td><td>0.0000</td><td>0.0000</td><td>0.0000</td></tr><tr><td>random-baseline</td><td>T3 幻觉识别</td><td>0.6970</td><td>0.1765</td><td>0.0000</td></tr><tr><td>always-first-baseline</td><td>T1 引用接地</td><td>0.0504</td><td>0.0420</td><td>0.0356</td></tr><tr><td>always-first-baseline</td><td>T2 条文检索</td><td>0.0000</td><td>0.0000</td><td>0.0000</td></tr><tr><td>always-first-baseline</td><td>T3 幻觉识别</td><td>1.0000</td><td>0.0000</td><td>0.0000</td></tr></tbody></table>
+<div class="note">T1 = 0.7×法条精确匹配 + 0.3×关键句字符级 F1；T2 = Recall@5；
+T3 = Accuracy，macro-F1 为三类平均。哑基线用于校准，证明基准能区分好坏模型。</div>
+</div>
+</div></body></html>

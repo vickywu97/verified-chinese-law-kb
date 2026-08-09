@@ -6,5 +6,6 @@ documented format.
 """
 from .base import ModelAdapter
 from .dummy import AlwaysFirstBaseline, RandomBaseline
+from .openai_stub import OpenAIAdapter
 
-__all__ = ["ModelAdapter", "AlwaysFirstBaseline", "RandomBaseline"]
+__all__ = ["ModelAdapter", "AlwaysFirstBaseline", "RandomBaseline", "OpenAIAdapter"]
