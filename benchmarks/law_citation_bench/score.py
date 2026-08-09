@@ -34,6 +34,19 @@ _LABEL_MAP = {
     "hit": "hit", "miss": "miss", "altered": "altered",
 }
 
+# Ordered label patterns. Critical ordering: ``未命中`` is matched BEFORE
+# ``命中`` and ``命中`` uses a negative lookbehind so the ``命中`` substring
+# inside ``未命中`` is NOT mistaken for "hit". CJK has no word boundaries,
+# so a naive ``"命中" in text`` check mislabels every correct "未命中" answer.
+_T3_PATTERNS = [
+    (re.compile(r"篡\s*改"), "altered"),
+    (re.compile(r"未\s*命中"), "miss"),
+    (re.compile(r"(?<!未)命\s*中"), "hit"),
+    (re.compile(r"\baltered\b", re.I), "altered"),
+    (re.compile(r"\bmiss\b", re.I), "miss"),
+    (re.compile(r"\bhit\b", re.I), "hit"),
+]
+
 
 def parse_t1(text):
     law = None
@@ -66,13 +79,9 @@ def parse_t2(text):
 
 
 def parse_t3(text):
-    low = text.lower()
-    for cn, en in _LABEL_MAP.items():
-        if cn in text:
-            return en
-    for en in ("hit", "miss", "altered"):
-        if en in low:
-            return en
+    for pat, lab in _T3_PATTERNS:
+        if pat.search(text):
+            return lab
     return None
 
 

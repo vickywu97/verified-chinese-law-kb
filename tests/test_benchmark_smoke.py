@@ -19,6 +19,7 @@ sys.path.insert(0, BENCH)
 
 from build_dataset import build, DEFAULT_N  # noqa: E402
 from run import run  # noqa: E402
+from score import parse_t3, parse_t1, parse_t2  # noqa: E402
 from adapters.openai_stub import PROVIDERS, resolve_provider  # noqa: E402
 
 
@@ -118,6 +119,32 @@ class ProviderAdapterTest(unittest.TestCase):
         self.assertEqual(out, "LAW: VAT_LAW\nARTICLE: 第1条")
         # adapter name reflects provider/model for the leaderboard
         self.assertEqual(adapter.name, "qwen/qwen-plus")
+
+
+class ParserRegressionTest(unittest.TestCase):
+    """Regression tests for scorer parsers (offline, no network)."""
+
+    def test_t3_no_substring_contamination(self):
+        # The key bug: "未命中" contains "命中"; a naive check mislabels it.
+        self.assertEqual(parse_t3("未命中"), "miss")
+        self.assertEqual(parse_t3("该引用属于未命中"), "miss")
+        self.assertEqual(parse_t3("命中"), "hit")
+        self.assertEqual(parse_t3("篡改"), "altered")
+        self.assertEqual(parse_t3("Hit"), "hit")
+        self.assertEqual(parse_t3("该引用为篡改"), "altered")
+        # prompts that echo all three options must not collapse to "hit"
+        self.assertEqual(parse_t3("判断为：未命中"), "miss")
+        self.assertIsNone(parse_t3("无法判断"))
+
+    def test_t1_and_t2_parsers(self):
+        t1 = parse_t1("LAW: VAT_LAW\nARTICLE: 第1条\nKEY: 在境内销售货物")
+        self.assertEqual(t1["law_code"], "VAT_LAW")
+        self.assertEqual(t1["article_number"], "第1条")
+        self.assertIn("境内", t1["key_sentence"])
+        self.assertIsNone(parse_t1("完全无关的回答"))
+        ids = parse_t2("VAT_LAW_1_v1\nVAT_LAW_2_v1\nVAT_LAW_3_v1")
+        self.assertEqual(ids, ["VAT_LAW_1_v1", "VAT_LAW_2_v1", "VAT_LAW_3_v1"])
+        self.assertEqual(parse_t2("ID: CIVIL_CODE_5_v1"), ["CIVIL_CODE_5_v1"])
 
 
 if __name__ == "__main__":
