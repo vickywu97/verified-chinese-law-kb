@@ -5,6 +5,7 @@ Offline / stdlib only. Loads verified statutes from the parent repo's
 """
 import json
 import os
+import re
 
 # law_code -> human-readable Chinese law name (used in generated queries)
 LAW_NAMES = {
@@ -17,6 +18,72 @@ LAW_NAMES = {
     "IIT_LAW": "个人所得税法",
     "PATENT_LAW": "专利法",
 }
+# reverse map: Chinese name -> law_code (a model may answer with either form)
+NAME_TO_CODE = {v: k for k, v in LAW_NAMES.items()}
+
+
+# --------------------------------------------------------------------------
+# Format-tolerant normalization (fairness: same answer, different valid format
+# must not be penalized). Pure syntactic, no semantic ambiguity.
+# --------------------------------------------------------------------------
+_CN_NUM = {
+    "零": 0, "〇": 0, "一": 1, "二": 2, "两": 2, "三": 3, "四": 4,
+    "五": 5, "六": 6, "七": 7, "八": 8, "九": 9,
+    "十": 10, "百": 100, "千": 1000,
+}
+
+
+def cn_to_int(text):
+    """Convert a short Chinese numeral (十/百/千 range) to int. Returns None
+    if it cannot be parsed as a pure Chinese numeral."""
+    if not text:
+        return None
+    total, cur = 0, 0
+    for ch in text:
+        if ch in "零〇一二两三四五六七八九":
+            cur = _CN_NUM[ch]
+        elif ch == "十":
+            total += (cur if cur else 1) * 10
+            cur = 0
+        elif ch == "百":
+            total += (cur if cur else 1) * 100
+            cur = 0
+        elif ch == "千":
+            total += (cur if cur else 1) * 1000
+            cur = 0
+        else:
+            return None
+    return total + cur
+
+
+def normalize_article(art):
+    """Normalize an article reference to an int regardless of surface form:
+    '第1条' / '第一条' / '1' / '第1260条' all -> 1 / 1260. Returns None if
+    no article number can be extracted."""
+    if art is None:
+        return None
+    s = art.strip()
+    # keep Arabic digits and CJK numerals only; drop 第/条/款/项/空格
+    s = re.sub(r"[^一二三四五六七八九十百千零〇0-9]", "", s)
+    if not s:
+        return None
+    if re.fullmatch(r"[0-9]+", s):
+        return int(s)
+    return cn_to_int(s)
+
+
+def match_law(pred_law, gold_law_code):
+    """True if ``pred_law`` denotes the same law as ``gold_law_code``, whether
+    the model answered with the code (VAT_LAW) or the Chinese name (增值税法)."""
+    if not pred_law:
+        return False
+    if pred_law == gold_law_code:
+        return True
+    if LAW_NAMES.get(gold_law_code) == pred_law:
+        return True
+    if NAME_TO_CODE.get(pred_law) == gold_law_code:
+        return True
+    return False
 
 # Path resolution: this file lives at <repo>/benchmarks/law_citation_bench/common.py
 HERE = os.path.dirname(os.path.abspath(__file__))

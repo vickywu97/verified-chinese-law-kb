@@ -83,6 +83,20 @@ def render_markdown(payload):
                 m.get("model", "?"), TASK_TITLE.get(task, task),
                 _f(_mean(d, "easy")), _f(_mean(d, "medium")), _f(_mean(d, "hard"))))
     L.append("")
+    L.append("## T3 分类明细（命中 / 未命中 / 篡改）")
+    L.append("")
+    L.append("| 模型 | 命中 n / acc | 未命中 n / acc | 篡改 n / acc |")
+    L.append("|---|---|---|---|")
+    for m in payload.get("models", []):
+        b = m.get("t3_by_label", {})
+
+        def cell(lab):
+            d = b.get(lab, {})
+            return "%d / %.4f" % (d.get("n", 0), d.get("acc", 0.0))
+
+        L.append("| %s | %s | %s | %s |" % (
+            m.get("model", "?"), cell("hit"), cell("miss"), cell("altered")))
+    L.append("")
     L.append("> 评分说明：T1 = 0.7×法条精确匹配 + 0.3×关键句字符级 F1；"
              "T2 = Recall@5（MRR 另列）；T3 = Accuracy，macro-F1 为三类平均。"
              "哑基线用于校准，证明基准能区分好坏模型。")
@@ -133,6 +147,17 @@ def render_html(payload):
                     _esc(m.get("model", "?")), _esc(TASK_TITLE.get(task, task)),
                     _mean(d, "easy"), _mean(d, "medium"), _mean(d, "hard")))
 
+    # T3 per-class rows (hit / miss / altered)
+    t3_rows = []
+    for m in models:
+        b = m.get("t3_by_label", {})
+        cells = []
+        for lab in ("hit", "miss", "altered"):
+            d = b.get(lab, {})
+            cells.append("%d / %.4f" % (d.get("n", 0), d.get("acc", 0.0)))
+        t3_rows.append("<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" % (
+            _esc(m.get("model", "?")), cells[0], cells[1], cells[2]))
+
     html = """<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -171,6 +196,10 @@ def render_html(payload):
 
 <div class="card"><h2>任务 × 难度 矩阵（Overall）</h2>
 <table><thead><tr><th>模型</th><th>任务</th><th>易</th><th>中</th><th>难</th></tr></thead>
+<tbody>%s</tbody></table></div>
+
+<div class="card"><h2>T3 分类明细（命中 / 未命中 / 篡改）</h2>
+<table><thead><tr><th>模型</th><th>命中 n/acc</th><th>未命中 n/acc</th><th>篡改 n/acc</th></tr></thead>
 <tbody>%s</tbody></table>
 <div class="note">T1 = 0.7×法条精确匹配 + 0.3×关键句字符级 F1；T2 = Recall@5；
 T3 = Accuracy，macro-F1 为三类平均。哑基线用于校准，证明基准能区分好坏模型。</div>
@@ -180,7 +209,8 @@ T3 = Accuracy，macro-F1 为三类平均。哑基线用于校准，证明基准�
         _esc(payload.get("dataset", "?")), payload.get("n_questions", 0),
         _esc(payload.get("generated_at", "?")),
         dd.get("easy", 0), dd.get("medium", 0), dd.get("hard", 0),
-        "".join(sum_rows), "".join(diff_rows), "".join(txd_rows))
+        "".join(sum_rows), "".join(diff_rows), "".join(txd_rows),
+        "".join(t3_rows))
     return html
 
 

@@ -18,9 +18,12 @@ BENCH = os.path.join(os.path.dirname(HERE), "benchmarks", "law_citation_bench")
 sys.path.insert(0, BENCH)
 
 from build_dataset import build, DEFAULT_N  # noqa: E402
-from run import run  # noqa: E402
-from score import parse_t3, parse_t1, parse_t2  # noqa: E402
+from run import run, run_model, load_preds, merge_runs  # noqa: E402
+from score import (parse_t3, parse_t1, parse_t2, t3_by_label,  # noqa: E402
+                   score_record, normalize_article, match_law)
 from adapters.openai_stub import PROVIDERS, resolve_provider  # noqa: E402
+from adapters import RandomBaseline, AlwaysFirstBaseline  # noqa: E402
+from common import load_statutes  # noqa: E402
 
 
 class BenchmarkSmokeTest(unittest.TestCase):
@@ -145,6 +148,89 @@ class ParserRegressionTest(unittest.TestCase):
         ids = parse_t2("VAT_LAW_1_v1\nVAT_LAW_2_v1\nVAT_LAW_3_v1")
         self.assertEqual(ids, ["VAT_LAW_1_v1", "VAT_LAW_2_v1", "VAT_LAW_3_v1"])
         self.assertEqual(parse_t2("ID: CIVIL_CODE_5_v1"), ["CIVIL_CODE_5_v1"])
+
+    def test_article_number_normalization(self):
+        # same article, different valid surface forms collapse to one int
+        self.assertEqual(normalize_article("第1条"), 1)
+        self.assertEqual(normalize_article("第一条"), 1)
+        self.assertEqual(normalize_article("1"), 1)
+        self.assertEqual(normalize_article("第1260条"), 1260)
+        self.assertEqual(normalize_article("第一千二百六十条"), 1260)
+        self.assertIsNone(normalize_article("无条文"))
+
+    def test_law_match_accepts_code_or_name(self):
+        self.assertTrue(match_law("VAT_LAW", "VAT_LAW"))
+        self.assertTrue(match_law("增值税法", "VAT_LAW"))
+        self.assertFalse(match_law("企业所得税法", "VAT_LAW"))
+
+    def test_t1_tolerant_exact_match(self):
+        # gold uses code + 第N条; a model answering with the Chinese name and
+        # a Chinese numeral must still score an exact (hard) match.
+        rec = {"task": "T1", "gold": {"law_code": "VAT_LAW",
+                                       "article_number": "第1条",
+                                       "key_sentence": "在境内销售货物"}}
+        good = "LAW: 增值税法\nARTICLE: 第一条\nKEY: 在境内销售货物"
+        bad = "LAW: 企业所得税法\nARTICLE: 第1条\nKEY: 在境内销售货物"
+        self.assertEqual(score_record(rec, good)["hard"], 1.0)
+        self.assertEqual(score_record(rec, bad)["hard"], 0.0)
+
+
+class T3BreakdownTest(unittest.TestCase):
+    def test_t3_by_label_structure(self):
+        pairs = [
+            ({"task": "T3", "gold": {"label": "hit"}}, {"pred": "hit", "score": 1.0}),
+            ({"task": "T3", "gold": {"label": "hit"}}, {"pred": "miss", "score": 0.0}),
+            ({"task": "T3", "gold": {"label": "miss"}}, {"pred": "miss", "score": 1.0}),
+            ({"task": "T3", "gold": {"label": "altered"}}, {"pred": "altered", "score": 1.0}),
+        ]
+        b = t3_by_label(pairs)
+        self.assertEqual(b["hit"], {"n": 2, "correct": 1, "acc": 0.5})
+        self.assertEqual(b["miss"], {"n": 1, "correct": 1, "acc": 1.0})
+        self.assertEqual(b["altered"], {"n": 1, "correct": 1, "acc": 1.0})
+
+
+class PipelineTest(unittest.TestCase):
+    """save-preds + offline merge round-trip (no network, no key)."""
+
+    def _tiny_dataset(self):
+        rows, _ = build(12, 20260809)
+        tmp = tempfile.mktemp(suffix=".jsonl")
+        with open(tmp, "w", encoding="utf-8") as fh:
+            for r in rows:
+                fh.write(json.dumps(r, ensure_ascii=False) + "\n")
+        return tmp, rows
+
+    def test_save_preds_roundtrip(self):
+        ds, rows = self._tiny_dataset()
+        kb = load_statutes()
+        a = RandomBaseline(kb)
+        preds_path = tempfile.mktemp(suffix=".jsonl")
+        run_model(a, rows, kb, 0, preds_path)
+        name, preds = load_preds(preds_path)
+        self.assertEqual(name, a.name)
+        self.assertEqual(len(preds), len(rows))
+        self.assertTrue(all("pred_text" in p and "qid" in p for p in preds))
+        self.assertEqual({p["qid"] for p in preds}, {r["qid"] for r in rows})
+
+    def test_offline_merge_two_saved(self):
+        ds, rows = self._tiny_dataset()
+        kb = load_statutes()
+        p1 = tempfile.mktemp(suffix=".jsonl")
+        p2 = tempfile.mktemp(suffix=".jsonl")
+        run_model(RandomBaseline(kb), rows, kb, 0, p1)
+        run_model(AlwaysFirstBaseline(kb), rows, kb, 0, p2)
+        out = tempfile.mktemp(suffix=".csv")
+        out_dir = os.path.dirname(out)
+        merge_runs([p1, p2], "all", out, ds, rows)
+        with open(os.path.join(out_dir, "leaderboard.json"), encoding="utf-8") as fh:
+            payload = json.load(fh)
+        names = {m["model"] for m in payload["models"]}
+        # both saved baselines present, no double-counting (merge skips recompute)
+        self.assertEqual(names, {"random-baseline", "always-first-baseline"})
+        for m in payload["models"]:
+            b = m["t3_by_label"]
+            tot = sum(b[l]["n"] for l in ("hit", "miss", "altered"))
+            self.assertEqual(tot, m["tasks"]["T3"]["n"])
 
 
 if __name__ == "__main__":

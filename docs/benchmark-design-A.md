@@ -1,6 +1,6 @@
 # 方向 A 设计草图：法条引用准确性评测基准（law-citation-bench）
 
-> 状态：**M0 / M1 / M2 / M3 均已落地（见 `benchmarks/law_citation_bench/`）**。本文是方案草图；M0 可复现数据集 + M1 哑基线跑通 + M3 难度分层与报告模板均已就绪；真实模型适配器（`adapters/openai_stub.py`）已接线，且内置阿里/Qwen、DeepSeek、智谱、Kimi 四家国产厂商的 OpenAI 兼容预设，用户自备任一 key 即可出首版真实跑分。
+> 状态：**M0 / M1 / M2 / M3 均已落地（见 `benchmarks/law_citation_bench/`）**。本文是方案草图；M0 可复现数据集 + M1 哑基线跑通 + M3 难度分层与报告模板均已就绪；真实模型适配器（`adapters/openai_stub.py`）已接线，且内置阿里/Qwen、DeepSeek、智谱、Kimi 四家国产厂商的 OpenAI 兼容预设，用户自备任一 key 即可出首版真实跑分。后续已补充：`--save-preds` 落盘预测 + `--merge` 离线重算合并（多模型横评零重复烧额度）、T3 命中/未命中/篡改 分类明细报告、T1 条文号归一化与中文法名容错。
 > 目标：在 `verified-chinese-law-kb`（2327 条逐字核验条文）之上，构建一个**离线可跑、纯标准库、可量化模型法条能力**的评测基准。
 
 ---

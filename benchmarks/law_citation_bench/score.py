@@ -13,6 +13,8 @@ Scoring summary across the three tasks:
 """
 import re
 
+from common import normalize_article, match_law
+
 # --------------------------------------------------------------------------
 # Similarity / parsing utilities
 # --------------------------------------------------------------------------
@@ -95,8 +97,11 @@ def score_record(record, pred_text):
         pred = parse_t1(pred_text)
         if pred is None:
             return {"score": 0.0, "hard": 0.0, "soft_f1": 0.0}
-        exact = (pred.get("law_code") == gold["law_code"] and
-                 pred.get("article_number") == gold["article_number"])
+        # tolerant exact match: same answer in a different valid surface form
+        # (第1条 / 第一条 / 1; VAT_LAW / 增值税法) must not be penalized.
+        exact = (match_law(pred.get("law_code"), gold["law_code"]) and
+                 normalize_article(pred.get("article_number")) ==
+                 normalize_article(gold["article_number"]))
         f1 = char_f1(pred.get("key_sentence", ""), gold.get("key_sentence", ""))
         return {"score": 0.7 * (1.0 if exact else 0.0) + 0.3 * f1,
                 "hard": 1.0 if exact else 0.0, "soft_f1": f1}
@@ -181,3 +186,23 @@ def _macro_f1(pairs):
         rec = tp / (tp + fn) if (tp + fn) else 0.0
         f1s.append(2 * prec * rec / (prec + rec) if (prec + rec) else 0.0)
     return _mean(f1s)
+
+
+def t3_by_label(pairs):
+    """Per-class accuracy for T3 (hit / miss / altered).
+
+    ``pairs`` is a list of (record, scored) where record["task"] == "T3".
+    Returns {label: {"n": int, "correct": int, "acc": float}}.
+    """
+    out = {lab: {"n": 0, "correct": 0, "acc": 0.0} for lab in ("hit", "miss", "altered")}
+    for rec, res in pairs:
+        lab = rec["gold"]["label"]
+        if lab not in out:
+            continue
+        out[lab]["n"] += 1
+        if res.get("pred") == lab:
+            out[lab]["correct"] += 1
+    for lab in out:
+        n = out[lab]["n"]
+        out[lab]["acc"] = (out[lab]["correct"] / n) if n else 0.0
+    return out

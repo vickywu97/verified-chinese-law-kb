@@ -51,6 +51,36 @@ python3 run.py --model openai    # OpenAI         (key: LAW_BENCH_OPENAI_KEY)
 #    指定具体模型（覆盖厂商默认）：python3 run.py --model qwen --model-name qwen-max
 ```
 
+## 多模型横评工作流（推荐）：先各自存预测，再离线合并
+
+> 关键设计：**`--save-preds` 把每条预测落盘**；`--merge` 离线重算评分（始终用
+> 当前 scorer）。这样——改了评分逻辑不必重新烧 API 额度；每个模型可在不同时间、
+> 用各自 key 单独跑；最后一次性合并成完整 leaderboard。
+
+```bash
+# ① 每个模型单独跑一次，把原始预测存到 preds/（文件名里的 "/" 换成 "__"）
+python3 run.py --model qwen     --save-preds preds/qwen__qwen-plus.jsonl
+python3 run.py --model deepseek --save-preds preds/deepseek__deepseek-chat.jsonl
+python3 run.py --model zhipu    --save-preds preds/zhipu__glm-4-flash.jsonl
+python3 run.py --model kimi     --save-preds preds/kimi__moonshot-v1-8k.jsonl
+#    （每次只调一个模型，省额度可加 --limit 50 先试跑）
+
+# ② 离线合并 + 重算（不调任何 API、不需要 key），产出最终 leaderboard
+python3 run.py --merge preds/qwen__qwen-plus.jsonl \
+                      preds/deepseek__deepseek-chat.jsonl \
+                      preds/zhipu__glm-4-flash.jsonl \
+                      preds/kimi__moonshot-v1-8k.jsonl \
+               --baseline all
+#    -> leaderboard.csv / .json / .md / .html（含 4 模型 + 2 哑基线 + T3 分类明细）
+```
+
+`preds/*.jsonl` 已被仓库 `.gitignore` 忽略（可复现、含模型输出但不入库）。
+
+### 离线重算验证（无需 key）
+`--merge` 完全离线：从已存预测文件重算分数，所以哪怕之后修正了评分器（如 T3
+解析 bug），也能直接重合并、不必重跑模型。CI 的 `tests/test_benchmark_smoke.py`
+已覆盖 save-preds 往返与离线 merge 两条路径。
+
 要求 Python ≥ 3.8（`python -S` 亦可，无任何第三方依赖；真实模型适配器仅在显式 `--model <provider>` 时懒加载 `requests`）。
 
 ## 当前结果（证明基准可区分好坏 + 已出首版真实跑分）

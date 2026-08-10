@@ -4,9 +4,20 @@
 Flow: dataset -> per-record prompt -> ModelAdapter.generate -> score_record
       -> aggregate -> leaderboard.csv / .json / .md / .html.
 
-Default baselines are offline calibration models (no API). Plug a real model
-with ``--model <provider>`` (requires a user-supplied key; never committed).
-Supported providers (all OpenAI-compatible): openai, qwen, deepseek, zhipu, kimi.
+Two modes:
+
+1. Single run (calls models):
+       python3 run.py --baseline all
+       python3 run.py --model qwen [--save-preds preds/qwen.jsonl]
+       python3 run.py --model deepseek --model-name deepseek-chat
+   The real-model path needs a key (never committed); baselines are offline.
+
+2. Offline merge (NO API, NO key) — the recommended way to build a multi-model
+   leaderboard after each model's predictions are saved once:
+       python3 run.py --merge preds/qwen.jsonl preds/deepseek.jsonl \
+                       preds/zhipu.jsonl preds/kimi.jsonl --baseline all
+   Re-scoring always uses the CURRENT scorer, so parser fixes apply to saved
+   predictions without re-calling any API (no wasted tokens).
 
 Usage:
     python3 run.py                          # random baseline + report
@@ -16,6 +27,8 @@ Usage:
     python3 run.py --model zhipu            # 智谱 GLM (ZHIPU_API_KEY)
     python3 run.py --model kimi             # Kimi/Moonshot (MOONSHOT_API_KEY)
     python3 run.py --model qwen --model-name qwen-max --api-key sk-...
+    python3 run.py --model qwen --save-preds preds/qwen__qwen-plus.jsonl
+    python3 run.py --merge preds/*.jsonl --baseline all
 """
 import argparse
 import csv
@@ -23,14 +36,15 @@ import datetime
 import json
 import os
 import sys
+from collections import OrderedDict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
 from common import load_statutes  # noqa: E402
-from score import score_record, aggregate  # noqa: E402
+from score import score_record, aggregate, t3_by_label  # noqa: E402
 from adapters import AlwaysFirstBaseline, RandomBaseline  # noqa: E402
-from adapters.openai_stub import OpenAIAdapter  # noqa: E402
+from adapters.openai_stub import resolve_provider  # noqa: E402
 from report import render_markdown, render_html  # noqa: E402
 
 
@@ -57,26 +71,77 @@ def load_dataset(path):
     return rows
 
 
-def run_model(adapter, records, kb, limit):
-    """Score one model and return its full aggregate dict."""
+# --------------------------------------------------------------------------
+# Prediction (model output) and persistence
+# --------------------------------------------------------------------------
+def run_model(adapter, records, kb, limit=0, save_path=None):
+    """Predict (optionally persist) + score one adapter; return its model dict."""
     if limit:
         records = records[:limit]
-    scored = []
+    pairs = []          # (record, pred_text)
+    preds = []          # serializable prediction rows
     for rec in records:
-        prompt = build_prompt(rec)
-        pred = adapter.generate(prompt)
-        scored.append(score_record(rec, pred))
-    agg = aggregate(records, scored)
+        pred = adapter.generate(build_prompt(rec))
+        pairs.append((rec, pred))
+        preds.append({
+            "qid": rec["qid"],
+            "task": rec["task"],
+            "law_code": rec["law_code"],
+            "difficulty": rec["difficulty"],
+            "source_article_id": rec.get("source_article_id"),
+            "pred_text": pred,
+        })
+    if save_path:
+        write_preds(save_path, adapter.name, preds)
+    return _model_from_pairs(adapter.name, pairs, len(records))
+
+
+def write_preds(path, model_name, preds):
+    out_dir = os.path.dirname(path) or "."
+    os.makedirs(out_dir, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as fh:
+        for p in preds:
+            fh.write(json.dumps({"model": model_name, **p},
+                                ensure_ascii=False) + "\n")
+
+
+def load_preds(path):
+    model_name = None
+    preds = []
+    with open(path, encoding="utf-8") as fh:
+        for line in fh:
+            line = line.strip()
+            if not line:
+                continue
+            obj = json.loads(line)
+            if model_name is None:
+                model_name = obj.get("model")
+            preds.append(obj)
+    return model_name, preds
+
+
+# --------------------------------------------------------------------------
+# Scoring aggregation
+# --------------------------------------------------------------------------
+def _model_from_pairs(model_name, pairs, n):
+    scored = [score_record(rec, pred) for rec, pred in pairs]
+    agg = aggregate([rec for rec, _ in pairs], scored)
+    t3_pairs = [(rec, s) for (rec, _), s in zip(pairs, scored)
+                if rec["task"] == "T3"]
     return {
-        "model": adapter.name,
-        "n": len(records),
+        "model": model_name,
+        "n": n,
         "overall": agg["overall"],
         "tasks": agg["tasks"],
         "difficulty": agg["difficulty"],
         "task_x_diff": agg.get("task_x_diff", {}),
+        "t3_by_label": t3_by_label(t3_pairs),
     }
 
 
+# --------------------------------------------------------------------------
+# Leaderboard output
+# --------------------------------------------------------------------------
 def _flat(m):
     t = m["tasks"]
     return {
@@ -103,7 +168,7 @@ def write_leaderboard(models, records, out_path, dataset_path):
         for m in models:
             w.writerow(_flat(m))
 
-    # 2) leaderboard.json (full detail incl. task_x_diff)
+    # 2) leaderboard.json (full detail incl. task_x_diff + t3_by_label)
     diff_dist = {d: sum(1 for r in records if r.get("difficulty") == d)
                  for d in ("easy", "medium", "hard")}
     payload = {
@@ -128,38 +193,106 @@ def write_leaderboard(models, records, out_path, dataset_path):
     return payload
 
 
-def resolve_adapters(baseline, kb, args):
-    adapters = []
+# --------------------------------------------------------------------------
+# Adapter resolution
+# --------------------------------------------------------------------------
+def baseline_adapters(baseline, kb):
     if baseline == "all":
-        adapters = [RandomBaseline(kb), AlwaysFirstBaseline(kb)]
-    elif baseline == "first":
-        adapters = [AlwaysFirstBaseline(kb)]
-    else:  # random (default)
-        adapters = [RandomBaseline(kb)]
-    provider = getattr(args, "model", None)
-    if provider:
-        # Imported here so the stdlib-only path never touches this module.
-        from adapters.openai_stub import resolve_provider
+        return [RandomBaseline(kb), AlwaysFirstBaseline(kb)]
+    if baseline == "first":
+        return [AlwaysFirstBaseline(kb)]
+    return [RandomBaseline(kb)]
+
+
+def build_adapters(baseline, kb, args):
+    """Return (baseline_adapters, provider_adapter_or_None)."""
+    baselines = baseline_adapters(baseline, kb)
+    provider = None
+    provider_name = getattr(args, "model", None)
+    if provider_name:
         try:
-            adapters.append(resolve_provider(
-                provider,
+            provider = resolve_provider(
+                provider_name,
                 api_key=getattr(args, "api_key", None),
                 model_name=getattr(args, "model_name", None),
                 base_url=getattr(args, "base_url", None),
-            ))
+            )
         except RuntimeError as e:
             sys.exit("ERROR: " + str(e))
         except ValueError as e:
             sys.exit("ERROR: " + str(e))
-    return adapters
+    return baselines, provider
 
 
+def resolve_adapters(baseline, kb, args):
+    """Backward-compatible: flat list of all adapters (baselines + provider)."""
+    baselines, provider = build_adapters(baseline, kb, args)
+    if provider is not None:
+        baselines.append(provider)
+    return baselines
+
+
+# --------------------------------------------------------------------------
+# Offline merge of saved predictions
+# --------------------------------------------------------------------------
+def merge_runs(preds_paths, baseline, out_path, dataset_path, records):
+    """Score saved prediction files (offline, no API) + baselines -> leaderboard."""
+    by_model = OrderedDict()
+    for path in preds_paths:
+        name, preds = load_preds(path)
+        if name is None:
+            name = os.path.splitext(os.path.basename(path))[0]
+        by_model.setdefault(name, []).extend(preds)
+
+    records_by_qid = {r["qid"]: r for r in records}
+    models = []
+    saved_names = set()
+    for name, preds in by_model.items():
+        pairs = []
+        seen = set()
+        unknown = 0
+        for p in preds:
+            qid = p.get("qid")
+            rec = records_by_qid.get(qid)
+            if rec is None:
+                unknown += 1
+                continue
+            seen.add(qid)          # dedupe by qid (last prediction wins)
+            pairs.append((rec, p.get("pred_text", "")))
+        if unknown:
+            print("WARN: %s references %d qid(s) absent from dataset (skipped)"
+                  % (name, unknown))
+        if not pairs:
+            print("WARN: %s has no matching predictions; skipped" % name)
+            continue
+        covered = len(seen)
+        if covered != len(records):
+            print("WARN: %s covers %d/%d questions (missing %d) — "
+                  "scores reflect partial coverage"
+                  % (name, covered, len(records), len(records) - covered))
+        models.append(_model_from_pairs(name, pairs, covered))
+        saved_names.add(name)
+
+    # baselines are deterministic -> recomputed offline each merge, but only if
+    # they were not already supplied as a saved file (avoids double-counting).
+    kb = load_statutes()
+    for a in baseline_adapters(baseline, kb):
+        if a.name in saved_names:
+            continue
+        models.append(run_model(a, records, kb, 0))
+    return write_leaderboard(models, records, out_path, dataset_path)
+
+
+# --------------------------------------------------------------------------
+# Entry points
+# --------------------------------------------------------------------------
 def run(dataset_path, baseline, out_path, limit=0):
     """Backward-compatible entry point: run a single baseline, emit reports,
     and return that model's flat row (used by the CI smoke test)."""
     records = load_dataset(dataset_path)
     kb = load_statutes()
-    adapters = resolve_adapters(baseline, kb, _fake_args(baseline, None))
+    args = _FakeArgs()
+    adapters = resolve_adapters(baseline, kb, args)
     models = [run_model(a, records, kb, limit) for a in adapters]
     write_leaderboard(models, records, out_path, dataset_path)
     return _flat(models[-1])
@@ -170,10 +303,6 @@ class _FakeArgs:
     api_key = None
     model_name = None
     base_url = None
-
-
-def _fake_args(baseline, _):
-    return _FakeArgs()
 
 
 def main():
@@ -189,13 +318,28 @@ def main():
     ap.add_argument("--model-name", default=None)
     ap.add_argument("--base-url", default=None)
     ap.add_argument("--out", default=os.path.join(HERE, "leaderboard.csv"))
-    ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--limit", type=int, default=0,
+                    help="only score the first N questions (saves tokens on trials)")
+    ap.add_argument("--save-preds", default=None,
+                    help="save raw predictions to this JSONL (used with --model)")
+    ap.add_argument("--merge", nargs="+", default=None,
+                    help="merge saved prediction files (offline, no API) into a "
+                         "leaderboard; implies baseline recompute")
     args = ap.parse_args()
 
     records = load_dataset(args.dataset)
+
+    if args.merge:
+        merge_runs(args.merge, args.baseline, args.out, args.dataset, records)
+        print("merged %d prediction file(s) -> %s" % (len(args.merge), args.out))
+        print("reports: leaderboard.md / leaderboard.html / leaderboard.json")
+        return
+
     kb = load_statutes()
-    adapters = resolve_adapters(args.baseline, kb, args)
-    models = [run_model(a, records, kb, args.limit) for a in adapters]
+    baselines, provider = build_adapters(args.baseline, kb, args)
+    models = [run_model(a, records, kb, args.limit) for a in baselines]
+    if provider is not None:
+        models.append(run_model(provider, records, kb, args.limit, args.save_preds))
     payload = write_leaderboard(models, records, args.out, args.dataset)
 
     print("ran %d model(s) -> %s" % (len(models), args.out))
@@ -205,7 +349,8 @@ def main():
             m["tasks"].get("T1", {}).get("mean", 0.0),
             m["tasks"].get("T2", {}).get("mean", 0.0),
             m["tasks"].get("T3", {}).get("mean", 0.0)))
-    print("reports: leaderboard.md / leaderboard.html / leaderboard.json")
+    saved = " + saved preds" if (provider is not None and args.save_preds) else ""
+    print("reports: leaderboard.md / leaderboard.html / leaderboard.json" + saved)
 
 
 if __name__ == "__main__":
