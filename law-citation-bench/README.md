@@ -52,9 +52,13 @@ python3 run.py --model openai    # OpenAI         (key: LAW_BENCH_OPENAI_KEY)
 #    调大/调小单次请求超时：       python3 run.py --model kimi --timeout 300
 #    网络抖动/拥堵时：             python3 run.py --model kimi --pace 0.3
 #       （每两次 API 调用间 sleep 指定秒数；kimi 默认 0.3s 以缓解 Moonshot 端拥堵）
-#    断点续跑（崩溃/超时后不重头烧钱）：
+#    断点续跑（崩溃/超时/限流后不重头烧钱）：
 #       python3 run.py --model kimi --save-preds preds/kimi__kimi-k2.6.jsonl --resume
 #       单题 API 失败不再中断整轮：该题为空白预测、其余照常完成（结果仍计入评分）。
+#       --resume 会跳过已有"有效预测"的 qid，但自动重跑"空白预测"（即记录的失败），
+#       因此限流后无需手动过滤空行——反复执行同一条 --resume 直到无空白为止即可。
+#    真实模型适配器对 429(限流)/5xx 会自动重试（尊重服务端 Retry-After，否则指数退避
+#    5s→10s→20s…；kimi 预设 max_retries=8），4xx(鉴权/参数错误)不重试、立即报错。
 #
 # 说明：kimi/kimi-k2.6 默认开启「思维链（thinking）」，首 token 很慢易触发读超时；
 #       仓库已默认对该模型发送 thinking=disabled 关掉推理，与其他基线模型对齐、也更省时。

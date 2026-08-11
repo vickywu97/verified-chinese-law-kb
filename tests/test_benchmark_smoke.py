@@ -115,9 +115,17 @@ class ProviderAdapterTest(unittest.TestCase):
             return fake_resp
 
         fake_requests = types.ModuleType("requests")
+        fake_requests.__path__ = []
         fake_requests.post = fake_post
+        fake_exc = types.ModuleType("requests.exceptions")
+        for nm in ("ReadTimeout", "ConnectTimeout", "ConnectionError",
+                   "ChunkedEncodingError", "HTTPError"):
+            setattr(fake_exc, nm, type(nm, (Exception,), {}))
+        fake_requests.exceptions = fake_exc
         saved = sys.modules.get("requests")
+        saved_exc = sys.modules.get("requests.exceptions")
         sys.modules["requests"] = fake_requests
+        sys.modules["requests.exceptions"] = fake_exc
         try:
             with mock.patch.dict(os.environ, {"DASHSCOPE_API_KEY": "sk-test-123"}):
                 adapter = resolve_provider("qwen")
@@ -127,6 +135,10 @@ class ProviderAdapterTest(unittest.TestCase):
                 sys.modules.pop("requests", None)
             else:
                 sys.modules["requests"] = saved
+            if saved_exc is None:
+                sys.modules.pop("requests.exceptions", None)
+            else:
+                sys.modules["requests.exceptions"] = saved_exc
         self.assertEqual(captured["url"],
                          "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions")
         self.assertEqual(captured["headers"]["Authorization"], "Bearer sk-test-123")
@@ -371,6 +383,165 @@ class ResilienceTest(unittest.TestCase):
         self.assertEqual(len(preds2), first_count)
         qids = [p["qid"] for p in preds2]
         self.assertEqual(len(set(qids)), len(qids))  # no duplicate qids
+
+    def test_resume_reruns_empty_predictions(self):
+        # A rate-limit burst leaves some qids with EMPTY pred_text (recorded
+        # failures). --resume must treat those as incomplete and re-run them,
+        # instead of skipping them as "done" — so no manual empty-filter step.
+        ds, rows = tiny_dataset()
+        kb = load_statutes()
+        preds_path = tempfile.mktemp(suffix=".jsonl")
+        run_model(self._FakeAdapter(), rows, kb, 0, preds_path)  # all good
+        name, preds = load_preds(preds_path)
+        # corrupt: keep first 3 good, turn next 3 into EMPTY, drop the rest 6.
+        with open(preds_path, "w", encoding="utf-8") as fh:
+            for p in preds[:3]:
+                fh.write(json.dumps({"model": name, **p}, ensure_ascii=False) + "\n")
+            for p in preds[3:6]:
+                p2 = dict(p)
+                p2["pred_text"] = ""
+                fh.write(json.dumps({"model": name, **p2}, ensure_ascii=False) + "\n")
+        # resume re-runs the 3 empties + 6 missing -> all 12 good, no dupes.
+        run_model(self._FakeAdapter(), rows, kb, 0, preds_path, resume=True)
+        _, preds2 = load_preds(preds_path)
+        self.assertEqual(len(preds2), len(rows))
+        qids = [p["qid"] for p in preds2]
+        self.assertEqual(len(set(qids)), len(qids))  # no duplicates
+        empties = [p for p in preds2 if not p.get("pred_text")]
+        self.assertEqual(len(empties), 0)  # empties were re-run
+
+
+class ProviderAdapterRetryTest(unittest.TestCase):
+    """The adapter MUST retry on rate-limit (429) / 5xx HTTP errors.
+
+    Regression guard for the bug where ``resp.raise_for_status()`` raised
+    ``HTTPError`` (what a 429 returns) but the retry loop only caught socket
+    timeouts — so every rate-limited request failed instantly and was written
+    as an empty prediction.
+    """
+
+    def _install(self, post_fn):
+        import types
+        import sys
+        from unittest import mock
+
+        class FakeHTTPError(Exception):
+            def __init__(self, response=None):
+                super().__init__("http")
+                self.response = response
+
+        exc = types.ModuleType("requests.exceptions")
+        for nm in ("ReadTimeout", "ConnectTimeout", "ConnectionError",
+                   "ChunkedEncodingError"):
+            setattr(exc, nm, type(nm, (Exception,), {}))
+        exc.HTTPError = FakeHTTPError
+
+        fake = types.ModuleType("requests")
+        fake.__path__ = []
+        fake.post = post_fn
+        fake.exceptions = exc
+
+        saved = sys.modules.get("requests")
+        saved_exc = sys.modules.get("requests.exceptions")
+        sys.modules["requests"] = fake
+        sys.modules["requests.exceptions"] = exc
+        self._saved = saved
+        self._saved_exc = saved_exc
+        self._FakeHTTPError = FakeHTTPError
+        self._mock = mock
+        return saved
+
+    def _restore(self):
+        import sys
+        saved = self._saved
+        if saved is None:
+            sys.modules.pop("requests", None)
+        else:
+            sys.modules["requests"] = saved
+        if self._saved_exc is None:
+            sys.modules.pop("requests.exceptions", None)
+        else:
+            sys.modules["requests.exceptions"] = self._saved_exc
+
+    def _resp(self, status, retry_after=None, content="OK"):
+        resp = self._mock.Mock()
+        resp.status_code = status
+        resp.headers = {"Retry-After": str(retry_after)} if retry_after else {}
+        if 200 <= status < 300:
+            resp.raise_for_status.return_value = None
+            resp.json.return_value = {
+                "choices": [{"message": {"content": content}}]}
+        else:
+            resp.raise_for_status.side_effect = self._FakeHTTPError(resp)
+        return resp
+
+    def test_retries_on_429_then_succeeds(self):
+        import sys
+        calls = {"n": 0}
+
+        def post(url, headers=None, json=None, timeout=None):
+            i = calls["n"]
+            calls["n"] += 1
+            if i < 2:
+                return self._resp(429, retry_after=0)
+            return self._resp(200)
+
+        saved = self._install(post)
+        try:
+            from adapters.openai_stub import OpenAIAdapter
+            a = OpenAIAdapter(api_key="x", model="m", base_url="http://x/v1",
+                              name="t/t", max_retries=5)
+            out = a.generate("hi")
+        finally:
+            self._restore()
+        self.assertEqual(out, "OK")
+        self.assertEqual(calls["n"], 3)  # two 429s retried, then success
+
+    def test_4xx_is_not_retried(self):
+        import sys
+        calls = {"n": 0}
+
+        def post(url, headers=None, json=None, timeout=None):
+            calls["n"] += 1
+            return self._resp(400)
+
+        saved = self._install(post)
+        try:
+            from adapters.openai_stub import OpenAIAdapter
+            a = OpenAIAdapter(api_key="x", model="m", base_url="http://x/v1",
+                              name="t/t", max_retries=5)
+            with self.assertRaises(Exception):
+                a.generate("hi")
+        finally:
+            self._restore()
+        self.assertEqual(calls["n"], 1)  # permanent error, no retry
+
+    def test_honors_retry_after_header(self):
+        import sys
+        import time
+        slept = []
+        real_sleep = time.sleep
+        time.sleep = lambda s: slept.append(s)
+        calls = {"n": 0}
+
+        def post(url, headers=None, json=None, timeout=None):
+            i = calls["n"]
+            calls["n"] += 1
+            if i < 1:
+                return self._resp(429, retry_after=3)
+            return self._resp(200)
+
+        saved = self._install(post)
+        try:
+            from adapters.openai_stub import OpenAIAdapter
+            a = OpenAIAdapter(api_key="x", model="m", base_url="http://x/v1",
+                              name="t/t", max_retries=5)
+            out = a.generate("hi")
+        finally:
+            time.sleep = real_sleep
+            self._restore()
+        self.assertEqual(out, "OK")
+        self.assertIn(3, slept)  # waited the server-specified Retry-After
 
 
 if __name__ == "__main__":

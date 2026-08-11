@@ -161,13 +161,22 @@ def run_model(adapter, records, kb, limit=0, save_path=None, resume=False,
     rec_by_qid = {r["qid"]: r for r in records}
 
     # Resume: load already-completed predictions so we neither re-call the API
-    # for them nor overwrite the file's prior contents.
+    # for them nor overwrite the file's prior contents. A prediction with an
+    # EMPTY pred_text (a recorded API failure) is treated as incomplete and is
+    # re-run, so --resume self-heals after rate-limit bursts without a manual
+    # empty-filter step.
     done = {}
     if resume and save_path and os.path.exists(save_path):
         _, existing = load_preds(save_path)
-        for p in existing:
-            if p.get("qid") in rec_by_qid:
-                done[p["qid"]] = p
+        good = [p for p in existing
+                if p.get("qid") in rec_by_qid and p.get("pred_text")]
+        # Rewrite the file keeping only the GOOD predictions; failed (empty)
+        # ones are dropped so they get re-appended as fresh results below.
+        if good:
+            stripped = [{k: v for k, v in p.items() if k != "model"} for p in good]
+            write_preds(save_path, adapter.name, stripped)
+        for p in good:
+            done[p["qid"]] = p
 
     pending = [r for r in records if r["qid"] not in done]
 
@@ -442,8 +451,10 @@ def main():
                     help="per-request timeout in seconds for the real-model API "
                          "(overrides provider default)")
     ap.add_argument("--resume", action="store_true",
-                    help="skip qids already present in --save-preds (crash-safe "
-                         "continuation after network failures)")
+                    help="continue from --save-preds: skip qids with a real "
+                         "prediction, but RE-RUN any qid whose prediction is "
+                         "empty (recorded API failure). Self-heals after "
+                         "rate-limit bursts without a manual empty-filter step.")
     ap.add_argument("--pace", type=float, default=0.0,
                     help="sleep this many seconds between API calls to avoid "
                          "rate-limit/congestion timeouts (kimi default 0.3)")
@@ -476,7 +487,7 @@ def main():
     baselines, provider = build_adapters(args.baseline, kb, args)
     # Moonshot/Kimi has been observed congesting under burst; ease it by default.
     if provider is not None and args.model == "kimi" and args.pace == 0.0:
-        args.pace = 0.3
+        args.pace = 1.0
     models = [run_model(a, records, kb, args.limit) for a in baselines]
     if provider is not None:
         models.append(run_model(provider, records, kb, args.limit,

@@ -54,6 +54,10 @@ PROVIDERS = {
         "env_key": "MOONSHOT_API_KEY",
         "timeout": 300,
         "disable_thinking": True,
+        # Moonshot/Kimi congests under burst; give the per-request retry more
+        # headroom so a 429 slides through the rolling window instead of
+        # failing the whole question.
+        "max_retries": 8,
     },
 }
 
@@ -86,6 +90,10 @@ class OpenAIAdapter(ModelAdapter):
 
     def generate(self, prompt):
         import requests
+        from requests.exceptions import (
+            ReadTimeout, ConnectTimeout, ConnectionError, ChunkedEncodingError,
+            HTTPError,
+        )
         payload = {
             "model": self.model,
             "messages": [{"role": "user", "content": prompt}],
@@ -102,21 +110,47 @@ class OpenAIAdapter(ModelAdapter):
                 )
                 resp.raise_for_status()
                 return resp.json()["choices"][0]["message"]["content"]
-            except (requests.exceptions.ReadTimeout,
-                    requests.exceptions.ConnectTimeout,
-                    requests.exceptions.ConnectionError,
-                    requests.exceptions.ChunkedEncodingError) as e:
+            except HTTPError as e:
+                last_err = e
+                status = getattr(getattr(e, "response", None), "status_code", None)
+                # 429 (rate-limited) and 5xx (transient server) are retryable;
+                # 4xx (bad request / auth) are permanent -> raise at once.
+                retryable = status in (429, 500, 502, 503, 504)
+                if attempt < self.max_retries and retryable:
+                    backoff = _retry_after(e) or (5 * 2 ** (attempt - 1))
+                    sys.stderr.write(
+                        "  [warn] %s attempt %d/%d HTTP %s; retry in %ds\n"
+                        % (self.model, attempt, self.max_retries, status, backoff))
+                    time.sleep(backoff)
+                    continue
+                raise  # permanent error or out of retries
+            except (ReadTimeout, ConnectTimeout, ConnectionError,
+                    ChunkedEncodingError) as e:
                 last_err = e
                 if attempt < self.max_retries:
-                    backoff = 2 ** attempt  # 2s, 4s, ...
+                    backoff = 5 * 2 ** (attempt - 1)  # 5s, 10s, 20s, ...
                     sys.stderr.write(
                         "  [warn] %s attempt %d/%d failed (%s); retry in %ds\n"
                         % (self.model, attempt, self.max_retries,
                            type(e).__name__, backoff))
                     time.sleep(backoff)
-                continue
+                    continue
         # surface the last transient error after exhausting retries
         raise last_err
+
+
+def _retry_after(exc):
+    """Return Retry-After seconds from an HTTPError response, capped at 60."""
+    resp = getattr(exc, "response", None)
+    if resp is None:
+        return None
+    ra = resp.headers.get("Retry-After")
+    if not ra:
+        return None
+    try:
+        return min(int(ra), 60)
+    except ValueError:
+        return None
 
 
 def resolve_provider(provider, api_key=None, model_name=None, base_url=None,
@@ -149,4 +183,5 @@ def resolve_provider(provider, api_key=None, model_name=None, base_url=None,
         name="%s/%s" % (provider, model),
         timeout=(timeout or preset.get("timeout", 120)),
         extra_body=extra_body,
+        max_retries=preset.get("max_retries", 5),
     )
