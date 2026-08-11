@@ -14,36 +14,46 @@ Usage (user supplies the key):
     text = adapter.generate(prompt)
 """
 import os
+import sys
+import time
 
 from .base import ModelAdapter
 
 
 # OpenAI-compatible provider presets. Add more here as needed.
+#   timeout        : per-request timeout (s); reasoning models need generous values
+#   disable_thinking: send {"thinking": {"type": "disabled"}} (kimi-k2 default ON)
 PROVIDERS = {
     "openai": {
         "base_url": "https://api.openai.com/v1",
         "default_model": "gpt-4o-mini",
         "env_key": "LAW_BENCH_OPENAI_KEY",
+        "timeout": 120,
     },
     "qwen": {
         "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
         "default_model": "qwen-plus",
         "env_key": "DASHSCOPE_API_KEY",
+        "timeout": 120,
     },
     "deepseek": {
         "base_url": "https://api.deepseek.com/v1",
         "default_model": "deepseek-chat",
         "env_key": "DEEPSEEK_API_KEY",
+        "timeout": 120,
     },
     "zhipu": {
         "base_url": "https://open.bigmodel.cn/api/paas/v4",
         "default_model": "glm-4-flash",
         "env_key": "ZHIPU_API_KEY",
+        "timeout": 120,
     },
     "kimi": {
         "base_url": "https://api.moonshot.cn/v1",
-        "default_model": "moonshot-v1-8k",
+        "default_model": "kimi-k2.6",
         "env_key": "MOONSHOT_API_KEY",
+        "timeout": 300,
+        "disable_thinking": True,
     },
 }
 
@@ -57,11 +67,14 @@ class OpenAIAdapter(ModelAdapter):
     name = "openai-compatible"
 
     def __init__(self, api_key, model, base_url="https://api.openai.com/v1",
-                 name=None):
+                 name=None, timeout=120, extra_body=None, max_retries=5):
         self.api_key = api_key
         self.model = model
         self.base_url = base_url.rstrip("/")
         self.name = name or ("%s (%s)" % (model, base_url))
+        self.timeout = timeout
+        self.extra_body = extra_body or {}
+        self.max_retries = max_retries
         # Lazy import so the stdlib-only default path never requires `requests`.
         try:
             import requests  # noqa: F401
@@ -73,18 +86,41 @@ class OpenAIAdapter(ModelAdapter):
 
     def generate(self, prompt):
         import requests
-        resp = requests.post(
-            self.base_url + "/chat/completions",
-            headers={"Authorization": "Bearer %s" % self.api_key},
-            json={"model": self.model,
-                  "messages": [{"role": "user", "content": prompt}]},
-            timeout=60,
-        )
-        resp.raise_for_status()
-        return resp.json()["choices"][0]["message"]["content"]
+        payload = {
+            "model": self.model,
+            "messages": [{"role": "user", "content": prompt}],
+        }
+        payload.update(self.extra_body)  # e.g. {"thinking": {"type": "disabled"}}
+        last_err = None
+        for attempt in range(1, self.max_retries + 1):
+            try:
+                resp = requests.post(
+                    self.base_url + "/chat/completions",
+                    headers={"Authorization": "Bearer %s" % self.api_key},
+                    json=payload,
+                    timeout=self.timeout,
+                )
+                resp.raise_for_status()
+                return resp.json()["choices"][0]["message"]["content"]
+            except (requests.exceptions.ReadTimeout,
+                    requests.exceptions.ConnectTimeout,
+                    requests.exceptions.ConnectionError,
+                    requests.exceptions.ChunkedEncodingError) as e:
+                last_err = e
+                if attempt < self.max_retries:
+                    backoff = 2 ** attempt  # 2s, 4s, ...
+                    sys.stderr.write(
+                        "  [warn] %s attempt %d/%d failed (%s); retry in %ds\n"
+                        % (self.model, attempt, self.max_retries,
+                           type(e).__name__, backoff))
+                    time.sleep(backoff)
+                continue
+        # surface the last transient error after exhausting retries
+        raise last_err
 
 
-def resolve_provider(provider, api_key=None, model_name=None, base_url=None):
+def resolve_provider(provider, api_key=None, model_name=None, base_url=None,
+                      timeout=None):
     """Return an ``OpenAIAdapter`` for a named provider preset.
 
     Key resolution order: explicit ``api_key`` -> provider env var ->
@@ -103,9 +139,14 @@ def resolve_provider(provider, api_key=None, model_name=None, base_url=None):
             "provider %r needs an API key: pass --api-key or set %s "
             "(or the generic %s)" % (provider, preset["env_key"], GENERIC_ENV_KEY))
     model = model_name or preset["default_model"]
+    extra_body = {}
+    if preset.get("disable_thinking"):
+        extra_body["thinking"] = {"type": "disabled"}
     return OpenAIAdapter(
         api_key=key,
         model=model,
         base_url=(base_url or preset["base_url"]),
         name="%s/%s" % (provider, model),
+        timeout=(timeout or preset.get("timeout", 120)),
+        extra_body=extra_body,
     )

@@ -20,13 +20,25 @@ sys.path.insert(0, BENCH)
 from build_dataset import build, DEFAULT_N  # noqa: E402
 from run import run, run_model, load_preds, merge_runs  # noqa: E402
 from score import (parse_t3, parse_t1, parse_t2, t3_by_label,  # noqa: E402
-                   score_record, normalize_article, match_law)
+                   score_record, normalize_article, match_law,
+                   normalize_t2_id)
 from adapters.openai_stub import PROVIDERS, resolve_provider  # noqa: E402
 from adapters import RandomBaseline, AlwaysFirstBaseline  # noqa: E402
 from common import load_statutes  # noqa: E402
 
 
+def tiny_dataset():
+    """Build a small deterministic dataset and return (path, rows)."""
+    rows, _ = build(12, 20260809)
+    tmp = tempfile.mktemp(suffix=".jsonl")
+    with open(tmp, "w", encoding="utf-8") as fh:
+        for r in rows:
+            fh.write(json.dumps(r, ensure_ascii=False) + "\n")
+    return tmp, rows
+
+
 class BenchmarkSmokeTest(unittest.TestCase):
+
     def test_dataset_builds_500(self):
         rows, total = build(DEFAULT_N, 20260809)
         self.assertEqual(len(rows), DEFAULT_N)
@@ -149,6 +161,23 @@ class ParserRegressionTest(unittest.TestCase):
         self.assertEqual(ids, ["VAT_LAW_1_v1", "VAT_LAW_2_v1", "VAT_LAW_3_v1"])
         self.assertEqual(parse_t2("ID: CIVIL_CODE_5_v1"), ["CIVIL_CODE_5_v1"])
 
+    def test_t2_id_normalization_fairness(self):
+        # Syntactic variants of the SAME article must normalize to the
+        # canonical KB id so a correct answer is not unfairly penalized.
+        self.assertEqual(parse_t2("CIVIL_CODE_ART_654_v1"),
+                         ["CIVIL_CODE_654_v1"])
+        self.assertEqual(parse_t2("CIVIL_CODE_ARTICLE_331_v1"),
+                         ["CIVIL_CODE_331_v1"])
+        self.assertEqual(parse_t2("COMP_LAW_37_v1"),
+                         ["COMPANY_LAW_37_v1"])
+        # trailing _v1 optional and a CJK suffix after the id are tolerated
+        self.assertEqual(parse_t2("VAT_LAW_1_v1：民法典第123条"),
+                         ["VAT_LAW_1_v1"])
+        # a model-invented / wrong code is NOT aliased -> stays a miss
+        self.assertEqual(parse_t2("CEN_LAW_6_v1"), ["CEN_LAW_6_v1"])
+        self.assertEqual(normalize_t2_id("CIVIL_CODE_ART_654_v1"),
+                         "CIVIL_CODE_654_v1")
+
     def test_article_number_normalization(self):
         # same article, different valid surface forms collapse to one int
         self.assertEqual(normalize_article("第1条"), 1)
@@ -192,16 +221,8 @@ class T3BreakdownTest(unittest.TestCase):
 class PipelineTest(unittest.TestCase):
     """save-preds + offline merge round-trip (no network, no key)."""
 
-    def _tiny_dataset(self):
-        rows, _ = build(12, 20260809)
-        tmp = tempfile.mktemp(suffix=".jsonl")
-        with open(tmp, "w", encoding="utf-8") as fh:
-            for r in rows:
-                fh.write(json.dumps(r, ensure_ascii=False) + "\n")
-        return tmp, rows
-
     def test_save_preds_roundtrip(self):
-        ds, rows = self._tiny_dataset()
+        ds, rows = tiny_dataset()
         kb = load_statutes()
         a = RandomBaseline(kb)
         preds_path = tempfile.mktemp(suffix=".jsonl")
@@ -213,7 +234,7 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual({p["qid"] for p in preds}, {r["qid"] for r in rows})
 
     def test_offline_merge_two_saved(self):
-        ds, rows = self._tiny_dataset()
+        ds, rows = tiny_dataset()
         kb = load_statutes()
         p1 = tempfile.mktemp(suffix=".jsonl")
         p2 = tempfile.mktemp(suffix=".jsonl")
@@ -231,6 +252,92 @@ class PipelineTest(unittest.TestCase):
             b = m["t3_by_label"]
             tot = sum(b[l]["n"] for l in ("hit", "miss", "altered"))
             self.assertEqual(tot, m["tasks"]["T3"]["n"])
+
+    def test_merge_recomputes_baselines_with_nonzero_score(self):
+        # Regression: baselines are recomputed in merge mode WITHOUT a saved
+        # file (save_path=None). A bug once gated generation behind save_path,
+        # scoring baselines as all-empty (0.0). They must score > 0.
+        ds, rows = tiny_dataset()
+        kb = load_statutes()
+        # a synthetic saved model file (not a baseline) so merge recomputes them
+        pf = tempfile.mktemp(suffix=".jsonl")
+        with open(pf, "w", encoding="utf-8") as fh:
+            for r in rows:
+                fh.write(json.dumps({
+                    "model": "fake/model", "qid": r["qid"], "task": r["task"],
+                    "law_code": r["law_code"], "difficulty": r["difficulty"],
+                    "source_article_id": r.get("source_article_id"),
+                    "pred_text": "ignored",
+                }, ensure_ascii=False) + "\n")
+        out = tempfile.mktemp(suffix=".csv")
+        out_dir = os.path.dirname(out)
+        merge_runs([pf], "all", out, ds, rows)
+        with open(os.path.join(out_dir, "leaderboard.json"), encoding="utf-8") as fh:
+            payload = json.load(fh)
+        by_name = {m["model"]: m for m in payload["models"]}
+        self.assertIn("random-baseline", by_name)
+        self.assertIn("always-first-baseline", by_name)
+        # both baselines must have actually run (non-zero overall)
+        self.assertGreater(by_name["random-baseline"]["overall"], 0.0)
+        self.assertGreater(by_name["always-first-baseline"]["overall"], 0.0)
+
+
+class ResilienceTest(unittest.TestCase):
+    """run_model must survive per-question API failures and support resume."""
+
+    class _FakeAdapter:
+        name = "fake/canned"
+
+        def __init__(self, fail_indices=()):
+            self._i = 0
+            self._fail = set(fail_indices)
+
+        def generate(self, prompt):
+            idx = self._i
+            self._i += 1
+            if idx in self._fail:
+                raise RuntimeError("simulated API timeout at call %d" % idx)
+            return "pred-%d" % idx
+
+    def test_per_question_failure_does_not_abort_run(self):
+        ds, rows = tiny_dataset()
+        kb = load_statutes()
+        # fail the first and the last call; the rest must still be recorded.
+        n = len(rows)
+        adapter = self._FakeAdapter(fail_indices={0, n - 1})
+        preds_path = tempfile.mktemp(suffix=".jsonl")
+        model = run_model(adapter, rows, kb, 0, preds_path)
+        name, preds = load_preds(preds_path)
+        self.assertEqual(len(preds), n)
+        empties = [p for p in preds if p["pred_text"] == ""]
+        self.assertEqual(len(empties), 2)  # the two failed calls
+        oks = [p for p in preds if p["pred_text"] != ""]
+        self.assertEqual(len(oks), n - 2)
+        self.assertTrue(all(p["pred_text"].startswith("pred-") for p in oks))
+        # the run completes (n equals dataset size, overall is finite)
+        self.assertEqual(model["n"], n)
+
+    def test_resume_skips_done_and_appends_no_duplicates(self):
+        ds, rows = tiny_dataset()
+        kb = load_statutes()
+        preds_path = tempfile.mktemp(suffix=".jsonl")
+        # first (full) run writes all predictions
+        run_model(self._FakeAdapter(), rows, kb, 0, preds_path)
+        first = load_preds(preds_path)[1]
+        first_count = len(first)
+
+        # simulate a crash: keep only the first 3 rows, discard the rest.
+        name, preds = load_preds(preds_path)
+        with open(preds_path, "w", encoding="utf-8") as fh:
+            for p in preds[:3]:
+                fh.write(json.dumps({"model": name, **p}, ensure_ascii=False) + "\n")
+
+        # resume must re-run only the missing qids and append (no duplicates).
+        run_model(self._FakeAdapter(), rows, kb, 0, preds_path, resume=True)
+        _, preds2 = load_preds(preds_path)
+        self.assertEqual(len(preds2), first_count)
+        qids = [p["qid"] for p in preds2]
+        self.assertEqual(len(set(qids)), len(qids))  # no duplicate qids
 
 
 if __name__ == "__main__":

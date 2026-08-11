@@ -49,6 +49,16 @@ python3 run.py --model openai    # OpenAI         (key: LAW_BENCH_OPENAI_KEY)
 #    以上任一命令都会同时跑 random + always-first 基线作对照，统一写四个文件。
 #    key 也可统一用 --api-key 传入，或用通用环境变量 LAW_BENCH_API_KEY。
 #    指定具体模型（覆盖厂商默认）：python3 run.py --model qwen --model-name qwen-max
+#    调大/调小单次请求超时：       python3 run.py --model kimi --timeout 300
+#    网络抖动/拥堵时：             python3 run.py --model kimi --pace 0.3
+#       （每两次 API 调用间 sleep 指定秒数；kimi 默认 0.3s 以缓解 Moonshot 端拥堵）
+#    断点续跑（崩溃/超时后不重头烧钱）：
+#       python3 run.py --model kimi --save-preds preds/kimi__kimi-k2.6.jsonl --resume
+#       单题 API 失败不再中断整轮：该题为空白预测、其余照常完成（结果仍计入评分）。
+#
+# 说明：kimi/kimi-k2.6 默认开启「思维链（thinking）」，首 token 很慢易触发读超时；
+#       仓库已默认对该模型发送 thinking=disabled 关掉推理，与其他基线模型对齐、也更省时。
+#       其余厂商（qwen/deepseek/zhipu）默认不开启推理，无需处理。
 ```
 
 ## 多模型横评工作流（推荐）：先各自存预测，再离线合并
@@ -62,14 +72,14 @@ python3 run.py --model openai    # OpenAI         (key: LAW_BENCH_OPENAI_KEY)
 python3 run.py --model qwen     --save-preds preds/qwen__qwen-plus.jsonl
 python3 run.py --model deepseek --save-preds preds/deepseek__deepseek-chat.jsonl
 python3 run.py --model zhipu    --save-preds preds/zhipu__glm-4-flash.jsonl
-python3 run.py --model kimi     --save-preds preds/kimi__moonshot-v1-8k.jsonl
+python3 run.py --model kimi     --save-preds preds/kimi__kimi-k2.6.jsonl
 #    （每次只调一个模型，省额度可加 --limit 50 先试跑）
 
 # ② 离线合并 + 重算（不调任何 API、不需要 key），产出最终 leaderboard
 python3 run.py --merge preds/qwen__qwen-plus.jsonl \
                       preds/deepseek__deepseek-chat.jsonl \
                       preds/zhipu__glm-4-flash.jsonl \
-                      preds/kimi__moonshot-v1-8k.jsonl \
+                      preds/kimi__kimi-k2.6.jsonl \
                --baseline all
 #    -> leaderboard.csv / .json / .md / .html（含 4 模型 + 2 哑基线 + T3 分类明细）
 ```

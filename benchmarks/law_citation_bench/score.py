@@ -31,6 +31,27 @@ def char_f1(a, b):
 
 
 _ID_RE = re.compile(r"[A-Z][A-Z0-9_]+\d+(?:\.\d+)?_v1")
+
+# T2 ID canonicalization. The KB ids are `CODE_ART_v1`; models emit many
+# syntactic variants of the same article. We map only unambiguous, purely
+# syntactic aliases so a model that writes `CIVIL_CODE_ART_654_v1` or
+# `COMP_LAW_37_v1` is credited for the correct article. Genuinely wrong
+# codes a model invents (e.g. `CEN_LAW`) are left unchanged and correctly
+# score as a miss -- this is fair scoring, not leniency.
+_CODE_ALIASES = {
+    "CIVIL_CODE_ART": "CIVIL_CODE",
+    "CIVIL_CODE_ARTICLE": "CIVIL_CODE",
+    "COMP_LAW": "COMPANY_LAW",
+}
+for _c in ("CIVIL_CODE", "COMPANY_LAW", "CRIMINAL_LAW", "VAT_LAW",
+           "EIT_LAW", "IIT_LAW", "TAX_ADMIN_LAW", "PATENT_LAW"):
+    _CODE_ALIASES.setdefault(_c, _c)
+
+# code (uppercase, may include _ART/_ARTICLE artifacts) + article digits,
+# optional trailing _v1. Non-greedy code lets `_ART_` be consumed as a
+# variant rather than as part of the article number.
+_T2_TOKEN_RE = re.compile(
+    r"([A-Z][A-Z0-9_]*?)_(?:ART(?:ICLE)?_)?(\d+(?:\.\d+)?)(?:_v1)?")
 _LABEL_MAP = {
     "命中": "hit", "未命中": "miss", "篡改": "altered",
     "hit": "hit", "miss": "miss", "altered": "altered",
@@ -66,17 +87,38 @@ def parse_t1(text):
     return {"law_code": law, "article_number": article, "key_sentence": key or ""}
 
 
+def _canon_code(code):
+    return _CODE_ALIASES.get(code.strip().upper(), code.strip().upper())
+
+
+def normalize_t2_id(raw):
+    """Return the canonical `CODE_ART_v1` id for a raw token, or None.
+
+    Strips syntactic noise (`_v1`, `_ART`/`_ARTICLE` insertions) and aliases
+    known code abbreviations to the KB's canonical law codes.
+    """
+    m = _T2_TOKEN_RE.search(raw)
+    if not m:
+        return None
+    code = _canon_code(m.group(1))
+    art = normalize_article(m.group(2))
+    if art is None:
+        return None
+    return "%s_%d_v1" % (code, art)
+
+
 def parse_t2(text):
     ids = []
-    for tok in _ID_RE.findall(text):
-        if tok not in ids:
-            ids.append(tok)
+    for code, art in _T2_TOKEN_RE.findall(text):
+        cid = normalize_t2_id("%s_%s" % (code, art))
+        if cid and cid not in ids:
+            ids.append(cid)
     # also accept an explicit "ID: xxx" prefix
     for line in text.splitlines():
         if line.startswith("ID:"):
-            tok = line[3:].strip()
-            if _ID_RE.match(tok) and tok not in ids:
-                ids.append(tok)
+            cid = normalize_t2_id(line[3:].strip())
+            if cid and cid not in ids:
+                ids.append(cid)
     return ids[:5]
 
 
@@ -107,7 +149,7 @@ def score_record(record, pred_text):
                 "hard": 1.0 if exact else 0.0, "soft_f1": f1}
     if task == "T2":
         pred_ids = parse_t2(pred_text)
-        gold_id = gold["relevant_ids"][0]
+        gold_id = normalize_t2_id(gold["relevant_ids"][0]) or gold["relevant_ids"][0]
         if gold_id in pred_ids:
             rank = pred_ids.index(gold_id) + 1
             return {"score": 1.0, "recall@5": 1.0, "mrr": 1.0 / rank}

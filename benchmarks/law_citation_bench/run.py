@@ -36,6 +36,7 @@ import datetime
 import json
 import os
 import sys
+import time
 from collections import OrderedDict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -74,26 +75,86 @@ def load_dataset(path):
 # --------------------------------------------------------------------------
 # Prediction (model output) and persistence
 # --------------------------------------------------------------------------
-def run_model(adapter, records, kb, limit=0, save_path=None):
-    """Predict (optionally persist) + score one adapter; return its model dict."""
+def append_pred(path, model_name, p):
+    """Append a single prediction row to the JSONL (incremental, crash-safe)."""
+    out_dir = os.path.dirname(path) or "."
+    os.makedirs(out_dir, exist_ok=True)
+    with open(path, "a", encoding="utf-8") as fh:
+        fh.write(json.dumps({"model": model_name, **p},
+                            ensure_ascii=False) + "\n")
+
+
+def run_model(adapter, records, kb, limit=0, save_path=None, resume=False,
+              pace=0.0):
+    """Predict (optionally persist, incrementally) + score one adapter.
+
+    Generation runs for EVERY adapter (baselines are offline; real models call
+    the API). A per-question API failure is caught and recorded as an empty
+    prediction so the whole run still completes (no total data loss).
+
+    When ``save_path`` is given, predictions are written incrementally (one
+    line per question) so a crash loses only the in-flight question. With
+    ``resume`` set, already-predicted qids are skipped and new predictions are
+    appended (crash-safe continuation across runs).
+    """
     if limit:
         records = records[:limit]
-    pairs = []          # (record, pred_text)
-    preds = []          # serializable prediction rows
-    for rec in records:
-        pred = adapter.generate(build_prompt(rec))
-        pairs.append((rec, pred))
-        preds.append({
-            "qid": rec["qid"],
-            "task": rec["task"],
-            "law_code": rec["law_code"],
-            "difficulty": rec["difficulty"],
-            "source_article_id": rec.get("source_article_id"),
-            "pred_text": pred,
-        })
-    if save_path:
-        write_preds(save_path, adapter.name, preds)
-    return _model_from_pairs(adapter.name, pairs, len(records))
+    rec_by_qid = {r["qid"]: r for r in records}
+
+    # Resume: load already-completed predictions so we neither re-call the API
+    # for them nor overwrite the file's prior contents.
+    done = {}
+    if resume and save_path and os.path.exists(save_path):
+        _, existing = load_preds(save_path)
+        for p in existing:
+            if p.get("qid") in rec_by_qid:
+                done[p["qid"]] = p
+
+    pending = [r for r in records if r["qid"] not in done]
+
+    # Generate predictions for the pending records.
+    new_pairs = []
+    if save_path and pending:
+        # Incremental, crash-safe append (used for real models we may re-run).
+        if not done:
+            open(save_path, "w", encoding="utf-8").close()
+        for rec in pending:
+            try:
+                pred = adapter.generate(build_prompt(rec))
+            except Exception as e:  # noqa: BLE001 — keep the run alive
+                sys.stderr.write(
+                    "  [warn] %s qid=%s failed (%s); recording empty pred\n"
+                    % (adapter.name, rec["qid"], type(e).__name__))
+                pred = ""
+            append_pred(save_path, adapter.name, {
+                "qid": rec["qid"],
+                "task": rec["task"],
+                "law_code": rec["law_code"],
+                "difficulty": rec["difficulty"],
+                "source_article_id": rec.get("source_article_id"),
+                "pred_text": pred,
+            })
+            new_pairs.append((rec, pred))
+            if pace:
+                time.sleep(pace)
+    else:
+        # No save path (e.g. baselines) or nothing pending: generate in memory.
+        for rec in pending:
+            try:
+                pred = adapter.generate(build_prompt(rec))
+            except Exception:  # noqa: BLE001
+                pred = ""
+            new_pairs.append((rec, pred))
+
+    # Score everything we have: fresh predictions + any resumed ones.
+    pairs = list(new_pairs)
+    for qid, p in done.items():
+        pairs.append((rec_by_qid[qid], p.get("pred_text", "")))
+
+    if done:
+        print("  [resume] skipped %d done qid(s), %d pending"
+              % (len(done), len(pending)))
+    return _model_from_pairs(adapter.name, pairs, len(pairs))
 
 
 def write_preds(path, model_name, preds):
@@ -216,6 +277,7 @@ def build_adapters(baseline, kb, args):
                 api_key=getattr(args, "api_key", None),
                 model_name=getattr(args, "model_name", None),
                 base_url=getattr(args, "base_url", None),
+                timeout=getattr(args, "timeout", None),
             )
         except RuntimeError as e:
             sys.exit("ERROR: " + str(e))
@@ -317,6 +379,15 @@ def main():
     ap.add_argument("--api-key", default=None)
     ap.add_argument("--model-name", default=None)
     ap.add_argument("--base-url", default=None)
+    ap.add_argument("--timeout", type=int, default=None,
+                    help="per-request timeout in seconds for the real-model API "
+                         "(overrides provider default)")
+    ap.add_argument("--resume", action="store_true",
+                    help="skip qids already present in --save-preds (crash-safe "
+                         "continuation after network failures)")
+    ap.add_argument("--pace", type=float, default=0.0,
+                    help="sleep this many seconds between API calls to avoid "
+                         "rate-limit/congestion timeouts (kimi default 0.3)")
     ap.add_argument("--out", default=os.path.join(HERE, "leaderboard.csv"))
     ap.add_argument("--limit", type=int, default=0,
                     help="only score the first N questions (saves tokens on trials)")
@@ -337,9 +408,13 @@ def main():
 
     kb = load_statutes()
     baselines, provider = build_adapters(args.baseline, kb, args)
+    # Moonshot/Kimi has been observed congesting under burst; ease it by default.
+    if provider is not None and args.model == "kimi" and args.pace == 0.0:
+        args.pace = 0.3
     models = [run_model(a, records, kb, args.limit) for a in baselines]
     if provider is not None:
-        models.append(run_model(provider, records, kb, args.limit, args.save_preds))
+        models.append(run_model(provider, records, kb, args.limit,
+                                args.save_preds, args.resume, args.pace))
     payload = write_leaderboard(models, records, args.out, args.dataset)
 
     print("ran %d model(s) -> %s" % (len(models), args.out))
