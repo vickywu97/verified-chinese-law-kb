@@ -85,26 +85,41 @@ def match_law(pred_law, gold_law_code):
         return True
     return False
 
-# Path resolution: this file lives at <repo>/benchmarks/law_citation_bench/common.py
+# Path resolution: this file lives at <standalone-repo>/law-citation-bench/common.py
 HERE = os.path.dirname(os.path.abspath(__file__))
+# The benchmark is SELF-CONTAINED: it ships a vendored snapshot of the verified
+# statutes (kb/kb_index.jsonl) so it runs fully offline without the parent
+# verified-chinese-law-kb repo. Refresh that snapshot with
+# tools/vendor_kb_index.py (needs the KB's modules/ dir).
+KB_INDEX_PATH = os.path.join(HERE, "kb", "kb_index.jsonl")
+
+# Optional override: point at a live KB modules/ dir to regenerate the dataset
+# straight from the source of truth. Keep None to use the vendored snapshot.
 REPO_ROOT = os.path.dirname(os.path.dirname(HERE))
 MODULES_DIR = os.path.join(REPO_ROOT, "modules")
 
 
-def load_statutes(modules_dir=MODULES_DIR):
-    """Load every verified statute from ``modules/*/statutes.jsonl``.
+def load_statutes(path=KB_INDEX_PATH):
+    """Load every verified statute from the benchmark's ground-truth index.
+
+    Default ``path`` is the vendored ``kb/kb_index.jsonl`` (self-contained,
+    offline). Pass a ``modules/`` directory to load straight from the parent
+    verified-chinese-law-kb repo instead.
 
     Only records with ``verification_status == "verified"`` are treated as
     ground truth. Returns a list of dict records (order is stable: sorted by
     module name then file order).
     """
     records = []
-    if not os.path.isdir(modules_dir):
-        raise FileNotFoundError("modules dir not found: %s" % modules_dir)
-    for mod_name in sorted(os.listdir(modules_dir)):
-        path = os.path.join(modules_dir, mod_name, "statutes.jsonl")
-        if not os.path.isfile(path):
-            continue
+    if not os.path.isfile(path) and not os.path.isdir(path):
+        raise FileNotFoundError("statutes path not found: %s" % path)
+    if os.path.isfile(path):
+        paths = [path]
+    else:
+        paths = [os.path.join(path, m, "statutes.jsonl")
+                 for m in sorted(os.listdir(path))]
+        paths = [p for p in paths if os.path.isfile(p)]
+    for path in paths:
         with open(path, encoding="utf-8") as fh:
             for line in fh:
                 line = line.strip()

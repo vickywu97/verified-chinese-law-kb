@@ -58,21 +58,22 @@
 ## 6. 目录结构（提议）
 
 ```
-benchmarks/
-  law_citation_bench/
-    dataset/            # 自动生成的 eval 集 (jsonl)
-    build_dataset.py    # 从 ../modules 构建
-    adapters/           # 模型适配器
-    score.py            # 评分
-    run.py              # 编排
-    leaderboard.csv
-    README.md
+law-citation-bench/            # 自包含、可独立发布的评测子包
+  kb/kb_index.jsonl   # 快照真值（2327 条核验条文），使基准离线自包含
+  dataset/            # 自动生成的 eval 集 (jsonl)
+  build_dataset.py    # 从 kb/kb_index.jsonl（或 --kb 指向 ../modules）构建
+  tools/vendor_kb_index.py  # 刷新真值快照
+  adapters/           # 模型适配器
+  score.py            # 评分
+  run.py              # 编排
+  leaderboard.csv
+  README.md
 ```
 
 ## 7. 与现有仓库的关系
 
-- 复用 `verified-chinese-law-kb` 作为真值，**不重复存储数据**。
-- 建议作为**独立 repo** `law-citation-bench` 发布（评测集与 KB 解耦，便于被他人引用跑分），本仓库在其 README 中互引。
+- 以 `verified-chinese-law-kb` 为**真值来源**；评测子包通过 `kb/kb_index.jsonl` **快照** 2327 条核验条文，因此克隆后离线即可跑分，无需父仓库模块（解耦）。
+- 已抽为仓库内的独立子包 `law-citation-bench/`，可直接 `cp` 出去 `git init` 作为**独立 repo** 发布（评测集与 KB 解耦，便于被他人引用跑分），本仓库 README 互引。
 
 ## 8. 交付里程碑（若开工）
 

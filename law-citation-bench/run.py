@@ -49,9 +49,66 @@ from adapters.openai_stub import resolve_provider  # noqa: E402
 from report import render_markdown, render_html  # noqa: E402
 
 
-def build_prompt(record):
+# --------------------------------------------------------------------------
+# Prompt construction (versioned)
+# --------------------------------------------------------------------------
+# T3 "未命中" (out-of-scope / non-existent article citation) was the hardest
+# class in the v1 run: every model scored ~0.000 on it, because the prompt
+# gave the model no way to know whether a cited article number actually exists
+# in the current law. v2 supplies the public, non-leaking article-count per law
+# (the same reference a human verifier consults) so the model can perform the
+# range check. hit/altered still require comparing the cited CONTENT against the
+# (unprovided) statute, so they are not trivially solved -- the improvement is
+# targeted at the genuine blind spot.
+_PROMPT_VERSION = "v2"
+
+
+def set_prompt_version(v):
+    global _PROMPT_VERSION
+    if v not in ("v1", "v2"):
+        raise ValueError("prompt version must be 'v1' or 'v2'")
+    _PROMPT_VERSION = v
+
+
+_LAW_COUNTS = None
+
+
+def law_article_counts():
+    """Map Chinese law name -> current max article number (cached)."""
+    global _LAW_COUNTS
+    if _LAW_COUNTS is None:
+        from common import (load_statutes, max_article_number_per_law,
+                            LAW_NAMES, law_name)
+        recs = load_statutes()
+        m = max_article_number_per_law(recs)
+        _LAW_COUNTS = {law_name(code): m[code] for code in LAW_NAMES if code in m}
+    return _LAW_COUNTS
+
+
+_T3_V1 = "[T3] {q}\n判断该引用属于哪一类：命中 / 未命中 / 篡改"
+
+
+def _build_t3_v2(q):
+    counts = law_article_counts()
+    count_line = "、".join("《%s》%d条" % (name, n) for name, n in counts.items())
+    return (
+        "[T3] 下面是一段声称引用了某部法律条文的文本。请判断该引用属于哪一类，"
+        "只输出一个中文标签。\n\n"
+        "三选一（只输出其中之一）：\n"
+        "- 命中：所引条文号在该法中真实存在，且文本内容与官方法条一致。\n"
+        "- 篡改：所引条文号真实存在，但文本内容与官方法条不符（数字被改动、"
+        "内容被截断或改写）。\n"
+        "- 未命中：所引条文号在该法中根本不存在（超出该法的条文总数，或该法无此条）。\n\n"
+        "各法现行条文总数（用于判断\"未命中\"）：\n" + count_line + "。\n\n"
+        "待判定文本：\n" + q + "\n\n"
+        "只输出一个标签：命中 / 未命中 / 篡改"
+    )
+
+
+def build_prompt(record, version=None):
     q = record["query"]
     task = record["task"]
+    version = version or _PROMPT_VERSION
     if task == "T1":
         return ("[T1] " + q + "\n请输出该规定对应的法条，格式：\n"
                 "LAW: <law_code>\nARTICLE: <第N条>\nKEY: <关键句>")
@@ -59,7 +116,9 @@ def build_prompt(record):
         return ("[T2] " + q + "\n请输出最相关的5个条文ID，每行一个，"
                 "格式如 VAT_LAW_1_v1：")
     # T3
-    return "[T3] " + q + "\n判断该引用属于哪一类：命中 / 未命中 / 篡改"
+    if version == "v1":
+        return _T3_V1.format(q=q)
+    return _build_t3_v2(q)
 
 
 def load_dataset(path):
@@ -396,7 +455,14 @@ def main():
     ap.add_argument("--merge", nargs="+", default=None,
                     help="merge saved prediction files (offline, no API) into a "
                          "leaderboard; implies baseline recompute")
+    ap.add_argument("--prompt-version", choices=["v1", "v2"], default="v2",
+                    help="T3 prompt variant (default v2 adds per-law article "
+                         "counts to help detect out-of-range '未命中' citations). "
+                         "Scorers are version-agnostic, so --merge always rescores "
+                         "with the current scorer.")
     args = ap.parse_args()
+
+    set_prompt_version(args.prompt_version)
 
     records = load_dataset(args.dataset)
 

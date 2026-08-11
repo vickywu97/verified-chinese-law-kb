@@ -22,4 +22,4 @@ archive/*.tmp
 *.secret
 
 # Benchmark: saved model predictions (regenerable from API; not committed)
-benchmarks/law_citation_bench/preds/*.jsonl
+law-citation-bench/preds/*.jsonl

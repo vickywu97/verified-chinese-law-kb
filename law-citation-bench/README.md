@@ -1,7 +1,7 @@
 # law-citation-bench · 方向 A 评测基准（M0–M3）
 
-> 在 [verified-chinese-law-kb](../../)（2327 条逐字核验条文）之上，构建**离线可跑、纯标准库、可量化模型法条引用能力**的评测基准。
-> 本目录是设计草图（[docs/benchmark-design-A.md](../../docs/benchmark-design-A.md)）的落地实现：**M0** 可复现数据集、**M1** 哑基线跑通、**M3** 难度分层与 Markdown/HTML 报告均已就绪；**M2** 真实模型适配器已接线，用户自备 key 即可出跑分。
+> 一个**离线可跑、纯标准库、可量化模型法条引用能力**的评测基准。真值来自 [verified-chinese-law-kb](../)（2327 条逐字核验条文）的快照 `kb/kb_index.jsonl`，克隆即可独立运行，无需父仓库。
+> 本目录是设计草图（`../docs/benchmark-design-A.md`）的落地实现：**M0** 可复现数据集、**M1** 哑基线跑通、**M3** 难度分层与 Markdown/HTML 报告均已就绪；**M2** 真实模型适配器已接线，用户自备 key 即可出跑分；现已抽为可独立发布的子包。
 
 ## 定位
 
@@ -114,8 +114,8 @@ python3 run.py --merge preds/qwen__qwen-plus.jsonl \
 ## 目录结构
 
 ```
-law_citation_bench/
-  common.py            # KB 加载 + 法律名映射（真值来源 = ../modules）
+law-citation-bench/                 # 自包含、可独立发布
+  common.py            # 加载 kb/kb_index.jsonl（快照真值）+ 法律名映射
   build_dataset.py     # M0：模板法从 KB 生成 500 题（离线、可复现）
   score.py             # 字符级F1 / Recall@5 / MRR / Macro-F1，纯 stdlib
   report.py            # M3：leaderboard.json -> Markdown / HTML 报告
@@ -124,9 +124,13 @@ law_citation_bench/
     base.py            # ModelAdapter 接口（generate(prompt)->str）
     dummy.py           # 校准基线：random / always-first
     openai_stub.py     # M2：真实 API 适配器（OpenAI 兼容；预设 qwen/deepseek/zhipu/kimi/openai，懒加载 requests）
+  kb/
+    kb_index.jsonl     # 快照 2327 条核验条文（真值；使基准离线自包含）
   dataset/
     smoke_500.jsonl    # 生成的评测集
     smoke_500.meta.json# 生成参数与统计（可复现凭证）
+  tools/
+    vendor_kb_index.py # 从该 KB 的 modules/ 刷新 kb/kb_index.jsonl
   leaderboard.csv      # 最近一次运行结果（扁平、机读）
   leaderboard.json     # 完整明细（含任务×难度矩阵）
   leaderboard.md       # M3 报告（Markdown，可贴 README/Notion）
@@ -149,4 +153,28 @@ law_citation_bench/
 | M2 | 接入真实模型 API（OpenAI 兼容，预设 qwen/deepseek/zhipu/kimi/openai） | ✅ 已接线，自备 key 即出跑分 |
 | M3 | 报告模板（Markdown/HTML）+ 难度分层可展示 leaderboard | ✅ 已实现 |
 
-> 发布建议：未来可作为独立 repo `law-citation-bench` 发布（评测集与 KB 解耦），本仓库 README 互引。当前阶段以子目录形式落地以便复用 KB。
+## 独立发布（与 KB 解耦）
+
+本目录已**自包含**：`kb/kb_index.jsonl` 快照了 2327 条核验条文作为真值，克隆后离线即可跑哑基线、评分、出报告，无需父仓库 `modules/`。要作为独立 repo 发布：
+
+```bash
+# 在仓库根目录把本目录整体拷出（保留历史可用 git subtree split）
+cp -r law-citation-bench /path/to/new/law-citation-bench
+cd /path/to/new/law-citation-bench
+git init && git add -A && git commit -m "law-citation-bench: standalone eval repo"
+# 刷新真值快照（可选，需能访问 verified-chinese-law-kb 的 modules/）：
+python3 tools/vendor_kb_index.py --modules /path/to/kb/modules
+```
+
+## T3 提示词迭代（v1 → v2）
+
+v1 跑分暴露一个真实弱点：**所有模型在 T3「未命中」（超范围/不存在条文号引用）上几乎全 0**。根因是 v1 提示词没给模型任何"该法条有多少条"的参考，模型无从判断所引条文号是否真实存在。
+
+`--prompt-version v2`（默认）在 T3 提示词中补入**各法现行条文总数**（公开法律信息，非泄漏答案），让模型能完成"条文号是否越界"这一范围核验；`命中`/`篡改` 仍需比对条文**内容**（基准不提供），因此并未被轻易解决——改进是**精准针对盲区**。
+
+```bash
+python3 run.py --model qwen --prompt-version v2 --save-preds preds/qwen__qwen-plus__v2.jsonl
+python3 run.py --merge preds/*__v2.jsonl --baseline all   # 离线重算，对比 v1/v2 提升
+```
+
+> 评分器与提示词版本无关：`--merge` 始终用当前 scorer 重算，改提示词不必重烧额度、且 v1/v2 预测可同台对比。

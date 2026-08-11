@@ -14,11 +14,12 @@ import unittest
 from unittest import mock
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-BENCH = os.path.join(os.path.dirname(HERE), "benchmarks", "law_citation_bench")
+BENCH = os.path.join(os.path.dirname(HERE), "law-citation-bench")
 sys.path.insert(0, BENCH)
 
 from build_dataset import build, DEFAULT_N  # noqa: E402
-from run import run, run_model, load_preds, merge_runs  # noqa: E402
+from run import (run, run_model, load_preds, merge_runs,  # noqa: E402
+                  build_prompt, set_prompt_version)
 from score import (parse_t3, parse_t1, parse_t2, t3_by_label,  # noqa: E402
                    score_record, normalize_article, match_law,
                    normalize_t2_id)
@@ -202,6 +203,38 @@ class ParserRegressionTest(unittest.TestCase):
         bad = "LAW: 企业所得税法\nARTICLE: 第1条\nKEY: 在境内销售货物"
         self.assertEqual(score_record(rec, good)["hard"], 1.0)
         self.assertEqual(score_record(rec, bad)["hard"], 0.0)
+
+
+class PromptVersionTest(unittest.TestCase):
+    """T3 prompt variants (v1 vs v2) must serialize deterministically and
+    v2 must embed the non-leaking per-law article counts + label options."""
+
+    def test_v1_prompt_is_legacy_form(self):
+        rec = {"task": "T3", "query": "根据《增值税法》第1条的规定：……"}
+        self.assertEqual(
+            build_prompt(rec, "v1"),
+            "[T3] 根据《增值税法》第1条的规定：……\n"
+            "判断该引用属于哪一类：命中 / 未命中 / 篡改")
+
+    def test_v2_prompt_embeds_counts_and_options(self):
+        rec = {"task": "T3", "query": "根据《增值税法》第1条的规定：……"}
+        p = build_prompt(rec, "v2")
+        # public, non-leaking article counts present (consistent with the
+        # dataset's out-of-range '未命中' generation)
+        self.assertIn("《增值税法》38条", p)
+        self.assertIn("《民法典》1260条", p)
+        # the three labels + the explicit instruction to output one of them
+        for lab in ("命中", "篡改", "未命中"):
+            self.assertIn(lab, p)
+        self.assertIn("只输出一个标签", p)
+        # the actual query text is included verbatim
+        self.assertIn("根据《增值税法》第1条的规定：……", p)
+
+    def test_set_prompt_version_rejects_bad_value(self):
+        with self.assertRaises(ValueError):
+            set_prompt_version("v9")
+        set_prompt_version("v1")
+        set_prompt_version("v2")
 
 
 class T3BreakdownTest(unittest.TestCase):
