@@ -2,7 +2,9 @@
 
 > 每一条条文均经执业律师逐字比对官方来源并具名签署的、带版本轴的、可独立下载的中国法律模块化知识库。
 >
-> A modular, versioned, downloadable Chinese statute knowledge base in which every article is line-by-line verified against the official source and signed by a practicing attorney.
+> **English — what this repo is.** A modular, versioned, downloadable Chinese-statute knowledge base in which **every article is line-by-line verified against the official source** (signed by a practicing attorney). 8 laws, **2,327 verified articles**, each released as an independently downloadable module with a version axis — a clean ground-truth source for RAG and legal-AI evaluation, not another scraped-law dump.
+>
+> Built by a **lawyer + tax adviser + patent attorney** as the data foundation behind [`law-citation-bench`](https://github.com/vickywu97/law-citation-bench) — the benchmark that measures how accurately LLMs cite this ground truth. Portfolio artifact for an AI legal-product / compliance career transition.
 
 ---
 
