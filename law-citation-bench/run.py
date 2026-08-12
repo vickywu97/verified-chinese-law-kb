@@ -134,6 +134,16 @@ def load_dataset(path):
 # --------------------------------------------------------------------------
 # Prediction (model output) and persistence
 # --------------------------------------------------------------------------
+# Circuit breaker: if this many consecutive generations fail (empty pred, i.e.
+# recorded API failures — almost always rate-limit 429s), the run PAUSES for
+# ``cooldown`` seconds instead of grinding through hundreds of doomed requests.
+# This bounds the damage of a sustained throttle (e.g. Kimi/Moonshot under
+# burst) to one episode of (CIRCUIT_TRIP * per-request-backoff + cooldown)
+# rather than a ~60-hour hammer, and gives the provider's window time to clear.
+CIRCUIT_TRIP = 3
+DEFAULT_COOLDOWN = 600  # seconds (10 minutes)
+
+
 def append_pred(path, model_name, p):
     """Append a single prediction row to the JSONL (incremental, crash-safe)."""
     out_dir = os.path.dirname(path) or "."
@@ -144,7 +154,7 @@ def append_pred(path, model_name, p):
 
 
 def run_model(adapter, records, kb, limit=0, save_path=None, resume=False,
-              pace=0.0):
+              pace=0.0, cooldown=DEFAULT_COOLDOWN):
     """Predict (optionally persist, incrementally) + score one adapter.
 
     Generation runs for EVERY adapter (baselines are offline; real models call
@@ -186,6 +196,7 @@ def run_model(adapter, records, kb, limit=0, save_path=None, resume=False,
         # Incremental, crash-safe append (used for real models we may re-run).
         if not done:
             open(save_path, "w", encoding="utf-8").close()
+        consec_fail = 0
         for rec in pending:
             try:
                 pred = adapter.generate(build_prompt(rec))
@@ -203,6 +214,20 @@ def run_model(adapter, records, kb, limit=0, save_path=None, resume=False,
                 "pred_text": pred,
             })
             new_pairs.append((rec, pred))
+            # Circuit breaker: a run of sustained failures means we are almost
+            # certainly rate-limited; pause to let the window clear instead of
+            # burning the rest of the quota on doomed requests.
+            if not pred:
+                consec_fail += 1
+            else:
+                consec_fail = 0
+            if consec_fail >= CIRCUIT_TRIP:
+                sys.stderr.write(
+                    "  [circuit] %d consecutive failures (rate-limited?); "
+                    "pausing %.0fs for cooldown, then resuming\n"
+                    % (consec_fail, cooldown))
+                time.sleep(cooldown)
+                consec_fail = 0
             if pace:
                 time.sleep(pace)
     else:
@@ -458,6 +483,10 @@ def main():
     ap.add_argument("--pace", type=float, default=0.0,
                     help="sleep this many seconds between API calls to avoid "
                          "rate-limit/congestion timeouts (kimi default 0.3)")
+    ap.add_argument("--cooldown", type=int, default=DEFAULT_COOLDOWN,
+                    help="circuit-breaker: if this many consecutive API calls "
+                         "fail (rate-limited), the run pauses this many seconds "
+                         "before continuing (default %d)" % DEFAULT_COOLDOWN)
     ap.add_argument("--out", default=os.path.join(HERE, "leaderboard.csv"))
     ap.add_argument("--limit", type=int, default=0,
                     help="only score the first N questions (saves tokens on trials)")
@@ -491,7 +520,8 @@ def main():
     models = [run_model(a, records, kb, args.limit) for a in baselines]
     if provider is not None:
         models.append(run_model(provider, records, kb, args.limit,
-                                args.save_preds, args.resume, args.pace))
+                                args.save_preds, args.resume, args.pace,
+                                args.cooldown))
     payload = write_leaderboard(models, records, args.out, args.dataset)
 
     print("ran %d model(s) -> %s" % (len(models), args.out))

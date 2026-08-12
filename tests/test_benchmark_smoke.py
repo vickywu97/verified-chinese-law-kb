@@ -410,6 +410,48 @@ class ResilienceTest(unittest.TestCase):
         empties = [p for p in preds2 if not p.get("pred_text")]
         self.assertEqual(len(empties), 0)  # empties were re-run
 
+    def test_circuit_breaker_pauses_on_sustained_failures(self):
+        # A sustained rate-limit (consecutive failures) must trip the circuit
+        # breaker and pause once, rather than grinding every request.
+        import time
+        slept = []
+        real_sleep = time.sleep
+        time.sleep = lambda s: slept.append(s)  # don't really sleep in tests
+        ds, rows = tiny_dataset()
+        kb = load_statutes()
+        preds_path = tempfile.mktemp(suffix=".jsonl")
+        # fail the first 5 calls, then succeed -> trips after 3, pauses once.
+        adapter = self._FakeAdapter(fail_indices=set(range(5)))
+        try:
+            run_model(adapter, rows, kb, 0, preds_path, cooldown=120)
+        finally:
+            time.sleep = real_sleep
+        self.assertIn(120, slept)  # exactly one cooldown pause occurred
+        name, preds = load_preds(preds_path)
+        self.assertEqual(len(preds), len(rows))  # all rows recorded
+        empties = [p for p in preds if not p.get("pred_text")]
+        self.assertEqual(len(empties), 5)  # the 5 failed calls -> empties
+
+    def test_circuit_breaker_does_not_trip_on_isolated_failure(self):
+        # A single isolated per-question failure must NOT trip the breaker.
+        import time
+        slept = []
+        real_sleep = time.sleep
+        time.sleep = lambda s: slept.append(s)
+        ds, rows = tiny_dataset()
+        kb = load_statutes()
+        preds_path = tempfile.mktemp(suffix=".jsonl")
+        # only the first call fails, then everything succeeds (consec never hits 3)
+        adapter = self._FakeAdapter(fail_indices={0})
+        try:
+            run_model(adapter, rows, kb, 0, preds_path, cooldown=120)
+        finally:
+            time.sleep = real_sleep
+        self.assertEqual(slept, [])  # no cooldown pause
+        name, preds = load_preds(preds_path)
+        empties = [p for p in preds if not p.get("pred_text")]
+        self.assertEqual(len(empties), 1)  # the single failed call
+
 
 class ProviderAdapterRetryTest(unittest.TestCase):
     """The adapter MUST retry on rate-limit (429) / 5xx HTTP errors.

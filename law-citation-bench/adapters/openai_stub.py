@@ -139,16 +139,43 @@ class OpenAIAdapter(ModelAdapter):
         raise last_err
 
 
+# Never sleep longer than this on a single 429 (a server cannot pin us in an
+# unbounded wait). 30 minutes is enough to slide past any sane rolling window.
+_RETRY_AFTER_CAP = 1800
+
+
 def _retry_after(exc):
-    """Return Retry-After seconds from an HTTPError response, capped at 60."""
+    """Return Retry-After seconds from an HTTPError response.
+
+    Accepts both the integer-seconds form (``Retry-After: 120``) and the
+    HTTP-date form (``Retry-After: Wed, 21 Oct 2015 07:28:00 GMT``), capped at
+    ``_RETRY_AFTER_CAP``. Kimi/Moonshot has been observed sending the
+    HTTP-date variant, which the previous int-only parser silently dropped —
+    so we fell back to the short exponential backoff and never waited out the
+    throttle.
+    """
     resp = getattr(exc, "response", None)
     if resp is None:
         return None
     ra = resp.headers.get("Retry-After")
     if not ra:
         return None
+    # HTTP-date form first.
     try:
-        return min(int(ra), 60)
+        import email.utils
+        import datetime
+        dt = email.utils.parsedate_to_datetime(ra)
+        if dt is not None:
+            now = (datetime.datetime.now(dt.tzinfo)
+                   if dt.tzinfo else datetime.datetime.now())
+            delta = (dt - now).total_seconds()
+            if delta > 0:
+                return int(min(delta, _RETRY_AFTER_CAP))
+    except (TypeError, ValueError, OverflowError):
+        pass
+    # integer-seconds form.
+    try:
+        return int(min(int(ra), _RETRY_AFTER_CAP))
     except ValueError:
         return None
 
