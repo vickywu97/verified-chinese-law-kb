@@ -187,11 +187,11 @@ python -S tools/validate_module.py --all         # 校验所有模块完整性
 
 ## 10. 评测基准（方向 A 原型）· law-citation-bench
 
-本仓库不止于「真值数据」，还内置一个可直接跑分的评测基准原型，把 KB 变成「跑分信号」——直接对应「能定义并量化 AI 质量（评测/跑分）」的作品集目标。
+本仓库不止于「真值数据」，还孵化了一个可直接跑分的评测基准原型，把 KB 变成「跑分信号」——直接对应「能定义并量化 AI 质量（评测/跑分）」的作品集目标。
 
-- 位置：[`law-citation-bench/`](law-citation-bench/)（**独立可发布**：自带的 `kb/kb_index.jsonl` 已快照 2327 条核验真值，克隆后离线即可跑分，无需父仓库模块）
-- 任务：T1 引用接地、T2 条文检索（RAG）、T3 幻觉识别，三任务可直接量化模型法条引用能力。
-- 现状：**M0–M3 已全部实现**——`build_dataset.py` 从 KB 确定性生成 500 题 smoke 集；哑基线 + 4 家国产模型（qwen/deepseek/zhipu/kimi）真实跑分已出 `leaderboard.{csv,json,md,html}`（证明基准可区分好坏模型）。T3 提示词已迭代到 v2（补充各法条文总数，专治"未命中"盲区）。真实模型接入与报告模板见设计草图 [`docs/benchmark-design-A.md`](docs/benchmark-design-A.md)。
+- **独立仓库**：[`law-citation-bench`](https://github.com/vickywu97/law-citation-bench)（已抽为独立 repo，自带的 `kb/kb_index.jsonl` 快照 2327 条核验真值，克隆即离线跑分，无需本仓库模块）
+- 任务：T1 引用接地、T2 条文检索（RAG）、T3 幻觉识别，三任务直接量化模型法条引用能力。
+- 现状：**M0–M3 已全部实现**——确定性生成 500 题 smoke 集；哑基线 + 国产模型（qwen/deepseek/zhipu/kimi）真实跑分已出 `leaderboard.{csv,json,md,html}`（证明基准可区分好坏模型）。T3 提示词已迭代到 v2（补充各法条文总数，专治"未命中"盲区；Qwen 未命中准确率 0.0000→0.9697）。架构设计与迭代记录见 [`docs/benchmark-design-A.md`](docs/benchmark-design-A.md)。
 
 ---
 

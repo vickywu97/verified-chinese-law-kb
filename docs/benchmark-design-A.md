@@ -1,6 +1,6 @@
 # 方向 A 设计草图：法条引用准确性评测基准（law-citation-bench）
 
-> 状态：**M0 / M1 / M2 / M3 均已落地（见 `benchmarks/law_citation_bench/`）**。本文是方案草图；M0 可复现数据集 + M1 哑基线跑通 + M3 难度分层与报告模板均已就绪；真实模型适配器（`adapters/openai_stub.py`）已接线，且内置阿里/Qwen、DeepSeek、智谱、Kimi 四家国产厂商的 OpenAI 兼容预设，用户自备任一 key 即可出首版真实跑分。后续已补充：`--save-preds` 落盘预测 + `--merge` 离线重算合并（多模型横评零重复烧额度）、T3 命中/未命中/篡改 分类明细报告、T1 条文号归一化与中文法名容错。
+> 状态：**M0 / M1 / M2 / M3 均已落地**，现已抽为独立仓库 [`law-citation-bench`](https://github.com/vickywu97/law-citation-bench)（自包含、可独立发布）。本文是方案草图；M0 可复现数据集 + M1 哑基线跑通 + M3 难度分层与报告模板均已就绪；真实模型适配器（`adapters/openai_stub.py`）已接线，且内置阿里/Qwen、DeepSeek、智谱、Kimi 四家国产厂商的 OpenAI 兼容预设，用户自备任一 key 即可出首版真实跑分。后续已补充：`--save-preds` 落盘预测 + `--merge` 离线重算合并（多模型横评零重复烧额度）、T3 命中/未命中/篡改 分类明细报告、T1 条文号归一化与中文法名容错。
 > 目标：在 `verified-chinese-law-kb`（2327 条逐字核验条文）之上，构建一个**离线可跑、纯标准库、可量化模型法条能力**的评测基准。
 
 ---
@@ -58,7 +58,7 @@
 ## 6. 目录结构（提议）
 
 ```
-law-citation-bench/            # 自包含、可独立发布的评测子包
+law-citation-bench/            # 自包含、可独立发布（现为独立仓库：https://github.com/vickywu97/law-citation-bench）
   kb/kb_index.jsonl   # 快照真值（2327 条核验条文），使基准离线自包含
   dataset/            # 自动生成的 eval 集 (jsonl)
   build_dataset.py    # 从 kb/kb_index.jsonl（或 --kb 指向 ../modules）构建
@@ -73,7 +73,7 @@ law-citation-bench/            # 自包含、可独立发布的评测子包
 ## 7. 与现有仓库的关系
 
 - 以 `verified-chinese-law-kb` 为**真值来源**；评测子包通过 `kb/kb_index.jsonl` **快照** 2327 条核验条文，因此克隆后离线即可跑分，无需父仓库模块（解耦）。
-- 已抽为仓库内的独立子包 `law-citation-bench/`，可直接 `cp` 出去 `git init` 作为**独立 repo** 发布（评测集与 KB 解耦，便于被他人引用跑分），本仓库 README 互引。
+- 已抽为独立 repo：[`law-citation-bench`](https://github.com/vickywu97/law-citation-bench)（评测集与 KB 解耦，便于被他人引用跑分），本仓库 README 互引。
 
 ## 8. 交付里程碑（若开工）
 
