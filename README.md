@@ -19,7 +19,7 @@
 ## 2. 为什么需要这个知识库
 
 当前主流法律 AI 在「基础法条引用」这一最不该出错的环节上集体失灵。在 companion benchmark
-[legal-hallucination-bench](https://github.com/vickywu97/legal-hallucination-bench)（如其尚未公开，请替换为实际地址）的实测中：
+[legal-hallucination-bench（私有仓库 · 需授权访问）](https://github.com/vickywu97/legal-hallucination-bench) 的实测中：
 
 - 5 个主流法律 / 通用大模型在基础法条引用任务上的 **幻觉率（HVI）介于 50%–64.6%**；
 - 其中 **增值税法域正确率为 0%** —— 模型几乎无法正确引用生效法条。
@@ -183,7 +183,7 @@ python -S tools/validate_module.py --all         # 校验所有模块完整性
 
 ## 9. 相关项目
 
-- **[legal-hallucination-bench](https://github.com/vickywu97/legal-hallucination-bench)**（如其尚未公开，请替换为实际地址）：本知识库的 companion benchmark——用真实模型排行榜证明主流法律 AI 在基础法条引用任务上的失败，并为「已核验真值数据」的必要性提供量化证据。本仓库的 M1 数据即取自该 benchmark 的已核验子集。
+- **[legal-hallucination-bench（私有仓库 · 需授权访问）](https://github.com/vickywu97/legal-hallucination-bench)**：本知识库的 companion benchmark——用真实模型排行榜证明主流法律 AI 在基础法条引用任务上的失败，并为「已核验真值数据」的必要性提供量化证据。本仓库的 M1 数据即取自该 benchmark 的已核验子集。
 
 ---
 
