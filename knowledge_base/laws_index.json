@@ -123,5 +123,20 @@
     "effective_date": "2019-01-01",
     "source_url": "https://flk.npc.gov.cn/",
     "source_accessed_at": "2026-08-06"
+  },
+  "COPYRIGHT_LAW": {
+    "name": "中华人民共和国著作权法",
+    "aliases": [
+      "著作权法"
+    ],
+    "type": "法律",
+    "order": 9,
+    "issuing_authority": "全国人民代表大会常务委员会",
+    "jurisdiction": "全国",
+    "status": "effective",
+    "promulgation_date": "2020-11-11",
+    "effective_date": "2021-06-01",
+    "source_url": "https://flk.npc.gov.cn/",
+    "source_accessed_at": "2026-08-18"
   }
 }
