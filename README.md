@@ -2,7 +2,7 @@
 
 > 每一条条文均经执业律师逐字比对官方来源并具名签署的、带版本轴的、可独立下载的中国法律模块化知识库。
 >
-> **English — what this repo is.** A modular, versioned, downloadable Chinese-statute knowledge base in which **every article is line-by-line verified against the official source** (signed by a practicing attorney). 8 laws, **2,327 verified articles**, each released as an independently downloadable module with a version axis — a clean ground-truth source for RAG and legal-AI evaluation, not another scraped-law dump.
+> **English — what this repo is.** A modular, versioned, downloadable Chinese-statute knowledge base in which **every article is line-by-line verified against the official source** (signed by a practicing attorney). **8 published laws (2,327 verified articles)**, plus a Copyright Law module in internal prep, each released as an independently downloadable module with a version axis — a clean ground-truth source for RAG and legal-AI evaluation, not another scraped-law dump.
 >
 > Built by a **lawyer + tax adviser + patent attorney** as the data foundation behind [`law-citation-bench`](https://github.com/vickywu97/law-citation-bench) — the benchmark that measures how accurately LLMs cite this ground truth. Portfolio artifact for an AI legal-product / compliance career transition.
 
@@ -93,8 +93,11 @@ python -S tools/validate_module.py --all         # 校验所有模块完整性
 | **M6** | 企业所得税法（2018-12-29 修正） | `EIT_LAW` | complete | 60 / 60 | 免费 |
 | **M7** | 个人所得税法（2019-01-01 修正） | `IIT_LAW` | complete | 22 / 22 | 免费 |
 | **M8** | 专利法（2021-06-01 施行） | `PATENT_LAW` | complete | 82 / 82 | 免费 |
+| **M9** | 著作权法（2021-06-01 施行，含 2010/2020 两版总则第1–5条） | `COPYRIGHT_LAW` | internal（未发布） | 10 / 10 | 免费 |
 
-**规划中**：Bench 源 8 部法律（民法典、公司法、税收征收管理法、增值税法、企业所得税法、个人所得税法、专利法、刑法）已全部覆盖。后续可扩展其他高频法律（如 民事诉讼法、行政诉讼法、劳动合同法、道路交通安全法等）。新增模块后会在 `catalog.json` 追加条目并发布对应 Release。
+**规划中**：Bench 源 8 部法律（民法典、公司法、税收征收管理法、增值税法、企业所得税法、个人所得税法、专利法、刑法）已全部覆盖（即上述 M1–M8，共 2,327 条）。后续可扩展其他高频法律（如 民事诉讼法、行政诉讼法、劳动合同法、道路交通安全法等）。新增模块后会在 `catalog.json` 追加条目并发布对应 Release。
+
+> **注**：著作权法（M9）已以 `internal` 状态入库——仅含总则第1–5条（2010 修正 + 2020 修正两版对照）共 10 条，**未发布、不可下载**，不计入上述 8 部已发布法律；待补全全文后再发布 Release。
 
 ---
 
