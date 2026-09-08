@@ -5,6 +5,8 @@
 > **English — what this repo is.** A modular, versioned, downloadable Chinese-statute knowledge base in which **every article is line-by-line verified against the official source** (signed by a practicing attorney). **8 published laws (2,327 verified articles)**, plus a Copyright Law module in internal prep, each released as an independently downloadable module with a version axis — a clean ground-truth source for RAG and legal-AI evaluation, not another scraped-law dump.
 >
 > Built by a **lawyer + tax adviser + patent attorney** as the data foundation behind [`law-citation-bench`](https://github.com/vickywu97/law-citation-bench) — the benchmark that measures how accurately LLMs cite this ground truth. Portfolio artifact for an AI legal-product / compliance career transition.
+>
+> 🧭 **作品集总览 / Portfolio hub**：[`vickywu97`](https://github.com/vickywu97/vickywu97) —— 串联数据地基（本仓库）、评测基准 `law-citation-bench`、量化基准 `legal-hallucination-bench`、合规产品 `compliance-triangle`、公开榜单 `legal-ai-watch`。
 
 ---
 
